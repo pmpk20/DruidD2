@@ -18,8 +18,32 @@ Data/TestDesign_3009_V3.xlsx
 # Shapefile county boundaries (not used in replication scripts)
 Data/Counties_and_Unitary_Authorities_*
 
+# Data/Main: only database_Step3.csv is committed; anonymised CSVs still contain
+# Postcode / latitude / longitude / IP_repeat_group — DO NOT commit until stripped.
+Data/Main/Data_Covariates_*.csv
+Data/Main/database_Step2.csv
+
 # RStudio project file
 D2Backup.Rproj
+
+# Local development/exploratory scripts — never intended for the public repo.
+# Numbered replication scripts (07-18) and XX_Druid_* are committed separately.
+Scripts/CEModelling/D2_HLCM*.R
+Scripts/CEModelling/D2_HLCMNL*.R
+Scripts/CEModelling/D2_LCMXL*.R
+Scripts/CEModelling/D2_Main*.R
+Scripts/CEModelling/D2_Truncated*.R
+Scripts/CEModelling/D2_Truncated_LC_3C_MXL_NoDR_V2_SimulatedMeans_*.csv
+Scripts/Figures/XX_FactSheet*.R
+Scripts/Figures/XX_HLCM*.R
+Scripts/Figures/XX_LCMXL*.R
+Scripts/Figures/XX_Turnbull*.R
+Scripts/Figures/XX_WTP*.R
+Scripts/Tables/XX_*.R
+Scripts/Pilots/
+Scripts/D2_HPCWorker.R
+Testing_Ngene_V1_iterations.csv
+job_submit.sh
 
 # Stray files
 %

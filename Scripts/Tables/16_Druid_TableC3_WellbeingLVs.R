@@ -366,8 +366,10 @@ colnames(TableOutput_Int_LV_Model) <-
 # *************************************************************************
 
 
-TableOutput_Int_LV_Model %>% write.csv(quote = FALSE, row.names = FALSE)
-TableOutput_Int_LV_Model %>% fwrite(sep = ",", here("CEOutput/Main/LCM", "D2_Truncated_LC_3C_MXL_NoDR_V1_Int_LV_Model.txt"))
+fwrite(TableOutput_Int_LV_Model,
+       here("OtherOutput/Tables", "TableC3_WellbeingLVs.csv"),
+       sep   = ",",
+       quote = TRUE)
 
 
 #### End of script
