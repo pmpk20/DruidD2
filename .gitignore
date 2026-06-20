@@ -1,5 +1,25 @@
 .Rproj.user
-.Rhistory 
-*.Rproj.user 
-CVoutput/ 
-desktop.ini 
+.Rhistory
+*.Rhistory
+*.Rproj.user
+*.Rproj
+CVoutput/
+desktop.ini
+
+# Large model objects — CEOutput tracked selectively via git add below
+CEOutput/
+
+# Pilot/test data not needed for replication
+Data/Pilot1/
+Data/Pilot2/
+Data/Pilot3/
+Data/TestDesign_3009_V3.xlsx
+
+# Shapefile county boundaries (not used in replication scripts)
+Data/Counties_and_Unitary_Authorities_*
+
+# RStudio project file
+D2Backup.Rproj
+
+# Stray files
+%

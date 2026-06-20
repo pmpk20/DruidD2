@@ -1,8 +1,8 @@
-#### D2: Table 1 Sample Vs Quota ###############
+#### D2: Table C3 Interaction Terms  ###############
 # Script author: Peter King (p.king1@leeds.ac.uk)
 # Last Edited: 20/05/2025
 # Change log: 
-# - Uses "D2_Truncated_LC_3C_MXL_NoDR_V3_estimates.csv"
+# - Just table 2 LV interaction terms
 
 
 
@@ -103,7 +103,6 @@
 # 
 # [1] C:/Users/earpkin/AppData/Local/Programs/R/R-4.5.0/library
 # * ── Packages attached to the search path.
-
 
 
 # ################################################################# #
@@ -300,149 +299,75 @@ Diagnostics <- function(Model) {
 Test <- ModelOutputs(Estimates) %>% data.frame()
 
 
-
 # *************************************************************************
-#### S5: Class allocation ####
+#### S5: Interactions LV ####
 # *************************************************************************
 
 
-ClassMembership <- apply(do.call(cbind, D2_Truncated_LC_3C_MXL_NoDR_V1_3C_UCWTP), 1, which.max)
-
-Data_Covariates$ClassMembership <- ClassMembership
-
-
-TableOutput_ClassAllocation_A <- Test %>%
-  dplyr::filter(str_starts(Variable, "ClassAllocation_")) %>% 
-  mutate(Variable = gsub(x = Variable, pattern = "ClassAllocation_", replacement = "")) %>%
+TableOutput_Int_LV_Model <- Test %>%
+  dplyr::filter(str_starts(Variable, "Int_LV_")) %>%
+  tidyr::separate(Variable, into = c("Int", "With", "Insect", "Attribute", "Level", "Class"), sep = "_") %>%
   mutate(
-    Class = str_extract(Variable, "^C[0-9]+"),
-    Class = as.numeric(str_replace(Class, "C", "")),
-    Variable = str_replace(Variable, "^C[0-9]+_", "")
-  ) %>% 
-  pivot_wider(names_from = Class, values_from = Estimate)
-
-
-
-## Find in files this one-way tabyl n (%)
-database %>%
-  tabyl(AgeGroup) %>%
-  adorn_totals("row") %>%
-  adorn_pct_formatting(digits = 2, rounding = "half up", affix_sign = TRUE) %>%
-  mutate(Output = paste0(AgeGroup, ": ", n, " (", percent, ")")) %>% 
-  dplyr::select(Output) %>% 
-  write.csv(quote = FALSE, row.names = FALSE)
-
-
-Summariser <- function(Variable) {
-  paste0(
-    Variable %>% mean() %>% sprintf("%.2f", .),
-    " (",
-    Variable %>% sd() %>% sprintf("%.2f", .),
-    ")"
-  )
-}
-
-# TableOutput_ClassAllocation_Variables <-
-# Data_Covariates %>%
-#   dplyr::group_by(ClassMembership) %>%
-#   summarise(
-#     "Q1Age" = Q1Age %>% Summariser(),
-#     "IncomeMidpoints_PlusMissing_Recoded" = IncomeMidpoints_PlusMissing_Recoded %>% Summariser(),
-#     "Female_dummy" = Female_dummy %>% Summariser(),
-#     "Q3Country_England" = Q3Country_England %>% Summariser(),
-#     "CE_Debrief_Certain_scaled" = CE_Debrief_Certain_scaled %>% Summariser(),
-#     "CE_Debrief_Confident_scaled" = CE_Debrief_Confident_scaled %>% Summariser(),
-#     "Q43_Citizen" = Q43_Citizen %>% Summariser(),
-#     "AlwaysZero" = AlwaysZero %>% Summariser()
-#   ) %>% 
-#   pivot_longer(cols = 2:9) %>% 
-#   pivot_wider(names_from = ClassMembership, values_from = value) 
-# 
-# TableOutput_ClassAllocation_Variables %>% 
-#   write.csv(quote = FALSE, row.names = FALSE)
-
-
-
-# First get your class summary statistics
-class_stats <- Data_Covariates %>%
-  dplyr::group_by(ClassMembership) %>%
-  dplyr::summarise(
-    "Q1Age" = Q1Age %>% Summariser(),
-    "Income" = IncomeMidpoints_PlusMissing_Recoded %>% Summariser(),
-    "Female_dummy" = Female_dummy %>% Summariser(),
-    "Q3Country_England" = Q3Country_England %>% Summariser(),
-    "CE_Debrief_Certain_scaled" = CE_Debrief_Certain_scaled %>% Summariser(),
-    "CE_Debrief_Confident_scaled" = CE_Debrief_Confident_scaled %>% Summariser(),
-    "Q43_Citizen" = Q43_Citizen %>% Summariser(),
-    "AlwaysZero" = AlwaysZero %>% Summariser()
+    Attribute = factor(Attribute, levels = c("Encounter", "Existence", "Bequest")),
+    Level = factor(Level, levels = c("Medium", "High")),
+    Class = factor(Class, levels = c("Class1", "Class2", "Class3"))
   ) %>%
-  pivot_longer(cols = -ClassMembership, names_to = "Variable") %>%
-  mutate(summary_stat = paste0("Class ", ClassMembership, ": ", value)) %>%
-  dplyr::select(-ClassMembership, -value) %>%
-  dplyr::group_by(Variable) %>%
-  dplyr::summarise(Class_summaries = paste(summary_stat, collapse = "\n"))
+  arrange(Attribute, Level, Class) %>%
+  dplyr::select(-c(Int, With)) %>%
+  pivot_wider(names_from = Insect, values_from = Estimate) %>%
+  unite("Level_Class", c(Level, Class), sep = " ") %>%
+  separate(Level_Class, into = c("Level", "Class"), sep = " ", remove = FALSE) %>%
+  relocate(Attribute, Level, Class, Bee, Beetle, Wasp) %>%
+  arrange(Attribute, Level, Class) %>% 
+  dplyr::select(-Level_Class)
 
-# Match variable names to align with model_estimates
-class_stats <- class_stats %>%
-  mutate(Variable = case_when(
-    Variable == "Q1Age" ~ "Q1Age",
-    Variable == "Income" ~ "Income",
-    Variable == "Female_dummy" ~ "Female_dummy",
-    Variable == "Q3Country_England" ~ "Q3Country_England",
-    Variable == "CE_Debrief_Certain_scaled" ~ "CE_Debrief_Certain_scaled",
-    Variable == "CE_Debrief_Confident_scaled" ~ "CE_Debrief_Confident_scaled",
-    Variable == "Q43_Citizen" ~ "Q43_Citizen",
-    Variable == "AlwaysZero" ~ "AlwaysZero",
-    TRUE ~ Variable
-  ))
 
-# Combine with your existing model estimates
-final_table <- Test %>%
-  dplyr::filter(str_starts(Variable, "ClassAllocation_")) %>% 
-  mutate(Variable = gsub(x = Variable, pattern = "ClassAllocation_", replacement = "")) %>%
-  mutate(
-    Class = str_extract(Variable, "^C[0-9]+"),
-    Class = as.numeric(str_replace(Class, "C", "")),
-    Variable = str_replace(Variable, "^C[0-9]+_", "")
-  ) %>% 
-  pivot_wider(names_from = Class, values_from = Estimate) %>%
-  left_join(class_stats, by = "Variable") %>%
-  # Add human-readable variable names
-  mutate(Variable_Label = case_when(
-    Variable == "Q1Age" ~ "Age: years of age",
-    Variable == "Income" ~ "Income: mean centred monthly gross income",
-    Variable == "Female_dummy" ~ "Female: female (1), any other (0)",
-    Variable == "Q3Country_England" ~ "England: living in England (1) vs living in Scotland or Wales (0)",
-    Variable == "CE_Debrief_Certain_scaled" ~ "Certainty: \"I am certain about the answers I gave\"",
-    Variable == "CE_Debrief_Confident_scaled" ~ "Consequentiality: \"I am confident that my choices in this survey will be considered in decision making\"",
-    Variable == "Q43_Citizen" ~ "Citizen science: involved (0) or not involved (1)",
-    Variable == "AlwaysZero" ~ "Discounting: chose £0 (1) over £200 (0)",
-    TRUE ~ Variable
-  )) %>%
-  dplyr::select(Variable_Label, Class_summaries, `1`, `2`)
+# TableOutput_Int_LV_Model$Class <- c(
+#   paste0("Class1", ": ", Label_Class1),
+#   paste0("Class2", ": ", Label_Class2),
+#   paste0("Class3", ": ", Label_Class3)) %>% rep(times = 6)
 
-# Rename columns for clarity
-names(final_table) <- c("Variable", "Class Summaries", "Class 1 (Pro-insect)", "Class 2 (Insect-averse)")
+colnames(TableOutput_Int_LV_Model) <-
+  c("Attribute", "Level", "Class", "Bee", "Beetle", "Wasp")
+
+
+# TableOutput_Int_LV_Model <- Test %>%
+#   dplyr::filter(str_starts(Variable, "Int_LV_")) %>%
+#   tidyr::separate(Variable, into = c("Int", "With", "Insect", "Attribute", "Level", "Class"), sep = "_") %>% 
+#   pivot_wider(names_from = Insect, values_from = Estimate) %>% 
+#   mutate(
+#     Attribute = factor(Attribute, levels = c("Encounter", "Existence", "Bequest")),
+#     Level = factor(Level, levels = c("Medium", "High")),
+#     Class = factor(Class, levels = c("Class1", "Class2", "Class3"))
+#   ) %>% 
+#   arrange(Class, Attribute, Level) %>%
+#   dplyr::select(-c(Int, With)) %>% 
+#   pivot_wider(names_from = Class, 
+#               values_from = c(Bee, Beetle, Wasp))
+# 
+# 
+# colnames(TableOutput_Int_LV_Model) <-c(
+#   "Attribute",
+#   "Level",
+#   paste0("Bee_Class1", "_", Label_Class1),
+#   paste0("Bee_Class2", "_", Label_Class2),
+#   paste0("Bee_Class3", "_", Label_Class3),
+#   paste0("Beetle_Class1", "_", Label_Class1),
+#   paste0("Beetle_Class2", "_", Label_Class2),
+#   paste0("Beetle_Class3", "_", Label_Class3),
+#   paste0("Wasp_Class1", "_", Label_Class1),
+#   paste0("Wasp_Class2", "_", Label_Class2),
+#   paste0("Wasp_Class3", "_", Label_Class3)
+# )
+
 
 # *************************************************************************
 #### S6: Export ####
 # *************************************************************************
 
 
-TableOutput_ClassAllocation <- final_table
-
-
-TableOutput_ClassAllocation  %>% write.csv(quote = FALSE, row.names = FALSE)
-
-
-TableOutput_ClassAllocation %>% fwrite(
-  sep = ",",
-  here(
-    "CEOutput/Main/LCM",
-    "D2_Truncated_LC_3C_MXL_NoDR_V1_ClassAllocation.txt"
-  )
-)
-
+TableOutput_Int_LV_Model %>% write.csv(quote = FALSE, row.names = FALSE)
+TableOutput_Int_LV_Model %>% fwrite(sep = ",", here("CEOutput/Main/LCM", "D2_Truncated_LC_3C_MXL_NoDR_V1_Int_LV_Model.txt"))
 
 
 #### End of script

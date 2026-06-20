@@ -6,7 +6,7 @@ Last Change: 23/04/2026
 
 ### Here you will find the survey design, experimental design, R code, raw responses, and model outputs.
 
-### PLEASE NOTE: Data is not publicly available while we are in the review process.
+### PLEASE NOTE: Data are publicly available in this repository and will be assigned a permanent DOI via Zenodo.
 
 #### Description:
 
@@ -14,7 +14,7 @@ Last Change: 23/04/2026
 -   `/Survey/` has the full survey reproduced and explained alongside pictures used therein.
 -   `/Biowell4/` is a backup for the Shiny app [here](https://pmpk20.shinyapps.io/biowell4/) demonstrating wellbeing scores from insects.
 -   Run `00_D2_Replicator.R` to execute all replication scripts in order. Scripts are numbered 01--15 by execution sequence.
--   Data will be made publicly available at publication stage.
+-   Data are publicly available in this repository. A Zenodo DOI will be linked here upon deposit.
 
 #### Directory structure (replication files only):
 
@@ -24,14 +24,14 @@ D2Backup/
 ├── Data/
 │   └── Main/
 │       ├── DRUID_resampling_DCE_d2_test2_2024-10-31.xlsx              # raw DCE responses (resampling wave)
-│       ├── DRUID_resampling_covariates_anonymised_2024_10_31.xlsx     # raw covariates (resampling wave)
+│       ├── DRUID_resampling_covariates_anonymised_2024_10_31.xlsx     # raw covariates (resampling wave); 1,684 × 155
 │       ├── DRUID_resampling_timestamps_2024-10-31.xlsx                # raw survey timestamps (resampling wave)
-│       ├── Data_Covariates_Step1.csv                                  # [output of 01] wide-format covariates
-│       ├── Data_Covariates_Step2.csv                                  # [output of 02] wide-format covariates
-│       ├── Data_Covariates_Step3.csv                                  # [output of 03] wide-format covariates
-│       ├── database_Step3.csv                                         # [output of 05] long-format CE data
-│       ├── Data_Covariates_Spatial_Step5.csv                          # [output of 05] covariates with wellbeing LVs
-│       └── Data_Covariates_Spatial_Step6_anonymised.csv               # [output of 06] covariates + class membership
+│       ├── Data_Covariates_Step1.csv                                  # [output of 01] wide-format covariates; 1,684 × 214
+│       ├── Data_Covariates_Step2.csv                                  # [output of 02] wide-format covariates; 1,684 × 220
+│       ├── Data_Covariates_Step3.csv                                  # [output of 03] wide-format covariates; 1,684 × 365
+│       ├── database_Step3.csv                                         # [output of 05] long-format CE data; 15,156 × 266
+│       ├── Data_Covariates_Spatial_Step5.csv                          # [output of 05] covariates with wellbeing LVs; 1,684 × 378
+│       └── Data_Covariates_Spatial_Step6_anonymised.csv               # [output of 06] covariates + class membership; 1,476 × 380
 ├── Scripts/
 │   ├── Setup/
 │   │   ├── 01_Druid_Setup_CleaningMain.R
@@ -41,18 +41,22 @@ D2Backup/
 │   │   ├── 05_Druid_Setup_SlidersFactorAnalysis.R
 │   │   └── 06_Druid_Setup_ClassMembership.R
 │   ├── CEModelling/
-│   │   ├── 07_Druid_Model_TruncatedLC3C.R
-│   │   └── 08_Druid_Model_SimulatedMeanWTP.R
+│   │   ├── 07_Druid_Model_TruncatedLC3C.R                        # → Table C2 (estimates.csv)
+│   │   └── 08_Druid_Model_SimulatedMeanWTP.R                     # → Table C1 (SimulatedMeans_Wide.csv)
 │   ├── Tables/
-│   │   ├── 09_Druid_Table_SampleVsQuota.R                        # Table 1
-│   │   ├── 14_Druid_Table_SampleVsPopulation.R                   # Table B2
-│   │   └── 16_Druid_Table_WellbeingLVs.R                         # Table C3
+│   │   ├── 09_Druid_Table1_ClassAllocation.R                     # Table 1
+│   │   ├── 14_Druid_TableB2_SampleVsPopulation.R                 # Table B2
+│   │   ├── 16_Druid_TableC3_WellbeingLVs.R                       # Table C3
+│   │   ├── 17_Druid_TableC1_SimulatedMeanWTP.R                   # Table C1
+│   │   └── 18_Druid_TableC2_ModelEstimates.R                     # Table C2
 │   └── Figures/
-│       ├── 10_Druid_Figure_WellbeingDistribution.R               # Figure 2
-│       ├── 11_Druid_Figure_WTPClasses.R                          # Figure 3
-│       ├── 12_Druid_Figure_WellbeingWTP.R                        # Figure 4
-│       ├── 13_Druid_Figure_CEDebrief.R                           # Figure B1
-│       └── 15_Druid_Figure_WTPClassesDistribution.R              # Figure C1
+│       ├── 10_Druid_Figure2_WTPClasses.R                         # Figure 2
+│       ├── 11_Druid_Figure3_WellbeingDistribution.R              # Figure 3
+│       ├── 12_Druid_Figure4_WellbeingWTP.R                       # Figure 4
+│       ├── 13_Druid_FigureB1_CEDebrief.R                         # Figure B1
+│       └── 15_Druid_FigureC1_WTPClassesDistribution.R            # Figure C1
+├── Survey/
+│   └── Figure1_ChoiceCard.png                                         # Figure 1 (static image, not script-generated)
 ├── CEOutput/
 │   └── Main/
 │       └── LCM/
@@ -62,12 +66,17 @@ D2Backup/
 │           ├── D2_Truncated_LC_3C_MXL_NoDR_V3_output.txt          # [output of 07] full model output
 │           └── D2_Truncated_LC_3C_MXL_NoDR_V3_SimulatedMeans_Wide.csv  # [output of 08] simulated WTP
 └── OtherOutput/
-    └── Figures/
-        ├── D2_Figure2_WellbeingDistributions.jpg                   # [output of 10] Figure 2
-        ├── D2_Figure3_WTPClasses.jpg                              # [output of 11] Figure 3
-        ├── D2_Figure4_WellbeingWTP.jpg                            # [output of 12] Figure 4
-        ├── D2_FigureB1_CEDebrief.jpg                              # [output of 13] Figure B1
-        └── D2_FigureC1_WTPClassesDistribution.jpg                 # [output of 15] Figure C1
+    ├── Figures/
+    │   ├── D2_Figure2_WTPClasses.jpg                              # [output of 10] Figure 2
+    │   ├── D2_Figure3_WellbeingDistributions.jpg                  # [output of 11] Figure 3
+    │   ├── D2_Figure4_WellbeingWTP.jpg                            # [output of 12] Figure 4
+    │   ├── D2_FigureB1_CEDebrief.jpg                              # [output of 13] Figure B1
+    │   └── D2_FigureC1_WTPClassesDistribution.jpg                 # [output of 15] Figure C1
+    └── Tables/
+        ├── TableB2_SampleVsQuota.txt                              # [output of 14] Table B2
+        ├── TableC1_SimulatedMeanWTP.csv                           # [output of 17] Table C1
+        ├── TableC2_ModelEstimates.csv                             # [output of 18] Table C2
+        └── TableC3_WellbeingLVs.csv                               # [output of 16] Table C3
 ```
 
 #### Acknowledgements:

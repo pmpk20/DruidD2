@@ -37,6 +37,8 @@
 # digest         0.6.37     2024-08-19 [1] CRAN (R 4.5.0)
 # dplyr        * 1.1.4      2023-11-17 [1] CRAN (R 4.5.0)
 # farver         2.1.2      2024-05-13 [1] CRAN (R 4.5.0)
+# future       * 1.49.0     2025-04-01 [1] CRAN (R 4.5.0)
+# future.apply * 1.11.3     2025-04-01 [1] CRAN (R 4.5.0)
 # forcats      * 1.0.0      2023-01-29 [1] CRAN (R 4.5.0)
 # generics       0.1.4      2025-05-09 [1] CRAN (R 4.5.0)
 # ggplot2      * 3.5.2      2025-04-09 [1] CRAN (R 4.5.0)
@@ -120,6 +122,8 @@ library(data.table)
 library(MASS)
 library(janitor)
 library(tidyverse)
+library(future)
+library(future.apply)
 
 
 # ****************************
@@ -1248,9 +1252,9 @@ fwrite(all_results_long,
 
 
 # *************************************************************
-#### Section X: Plot setup  ####
+#### Section X: Exploratory plots — disabled (duplicate of XX_Druid_Model_SimulatedMeansPlot.R) ####
 # *************************************************************
-
+if (FALSE) {
 
 TextSize <- 12
 
@@ -1407,5 +1411,6 @@ ggsave(
   dpi = 500
 )
 
+} # end if (FALSE) — plotting section disabled
 
 
