@@ -56,7 +56,8 @@ D2Backup/
 │       ├── 13_Druid_FigureB1_CEDebrief.R                         # Figure B1
 │       └── 15_Druid_FigureC1_WTPClassesDistribution.R            # Figure C1
 ├── Survey/
-│   └── Figure1_ChoiceCard.png                                         # Figure 1 (static image, not script-generated)
+│   ├── Figure1_ChoiceCard.png                                         # Figure 1 (static image, not script-generated)
+│   └── D2_V2.codeplan.xlsx                                            # SurveyEngine codeplan (question text source for script 19)
 ├── CEOutput/
 │   └── Main/
 │       └── LCM/

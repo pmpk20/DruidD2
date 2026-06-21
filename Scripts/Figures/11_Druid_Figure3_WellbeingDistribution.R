@@ -12,8 +12,8 @@
 # **********************************************************************************
 #### Replication Information:
 
-# here() = "K:/WinterAnalysis1307/WP5/WP5P3"
-# R version 4.2.0 (2022-04-22 ucrt)
+# here() = "C:/Users/earpkin/OneDrive - University of Leeds/DRUID/D2/Analysis/D2Backup"
+# R version 4.5.0 (2025-04-11 ucrt)
 # Platform: x86_64-w64-mingw32/x64 (64-bit)
 # Running under: Windows 10 x64 (build 19044)
 # Matrix products: default

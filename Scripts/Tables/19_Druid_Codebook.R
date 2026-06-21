@@ -1850,7 +1850,7 @@ col_info[r_type == "character" & is.na(value_labels),
 
 suppressMessages(library(readxl))
 
-cp_path <- "C:/Users/earpkin/OneDrive - University of Leeds/DRUID/D2/SurveyData/Main/main_resample_raw/delivery/D2_V2.codeplan.xlsx"
+cp_path <- here("Survey", "D2_V2.codeplan.xlsx")
 
 # Strip HTML tags, decode entities, remove embedded CSS/JS from SurveyEngine content
 clean_q_text <- function(raw) {
