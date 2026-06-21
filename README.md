@@ -1,6 +1,6 @@
 Author: Dr Peter King ([p.king1\@leeds.ac.uk](mailto:p.king1@leeds.ac.uk){.email})
 
-Last Change: 23/04/2026
+Last Change: 21/06/2026
 
 ## DRUID Insect survey
 
@@ -13,7 +13,7 @@ Last Change: 23/04/2026
 -   `/Data/Main/` contains anonymised survey data for N = 1,684 online UK respondents from October 2024. Raw SurveyEngine export files (covariates xlsx, timestamps xlsx) are withheld; the anonymised input to the pipeline is `Data_Covariates_Step0.csv`. See the commented block at the top of `01_Druid_Setup_CleaningMain.R` for details of what was withheld and why.
 -   `/Survey/` has the full survey reproduced and explained alongside pictures used therein.
 -   `/Biowell4/` is a backup for the Shiny app [here](https://pmpk20.shinyapps.io/biowell4/) demonstrating wellbeing scores from insects.
--   Run `00_D2_Replicator.R` to execute all replication scripts in order. Scripts are numbered 01--15 by execution sequence.
+-   Run `00_D2_Replicator.R` to execute all replication scripts in order. Scripts are numbered 01--19 by execution sequence.
 -   Data are publicly available in this repository. A Zenodo DOI will be linked here upon deposit.
 
 #### Directory structure (replication files only):
