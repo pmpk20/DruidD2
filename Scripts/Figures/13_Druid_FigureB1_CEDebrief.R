@@ -53,7 +53,7 @@ library(RColorBrewer)
 # Using fread() from data.table as significantly faster than read.csv()
 # Store data in Data subfolder so referencing it using here() package
 Data <-
-  here("Data/Main", "Data_Covariates_Spatial_Step6_anonymised.csv") %>% fread() %>% data.frame()
+  here("Data/Main", "Data_Covariates_Step6.csv") %>% fread() %>% data.frame()
 
 
 

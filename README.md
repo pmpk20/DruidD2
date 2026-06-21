@@ -10,7 +10,7 @@ Last Change: 23/04/2026
 
 #### Description:
 
--   `/Data/Main/` contains anonymised survey data for N = 1,684 online UK respondents from October 2024.
+-   `/Data/Main/` contains anonymised survey data for N = 1,684 online UK respondents from October 2024. Raw SurveyEngine export files (covariates xlsx, timestamps xlsx) are withheld; the anonymised input to the pipeline is `Data_Covariates_Step0.csv`. See the commented block at the top of `01_Druid_Setup_CleaningMain.R` for details of what was withheld and why.
 -   `/Survey/` has the full survey reproduced and explained alongside pictures used therein.
 -   `/Biowell4/` is a backup for the Shiny app [here](https://pmpk20.shinyapps.io/biowell4/) demonstrating wellbeing scores from insects.
 -   Run `00_D2_Replicator.R` to execute all replication scripts in order. Scripts are numbered 01--15 by execution sequence.
@@ -23,21 +23,20 @@ D2Backup/
 ├── 00_D2_Replicator.R
 ├── Data/
 │   └── Main/
-│       ├── DRUID_resampling_DCE_d2_test2_2024-10-31.xlsx              # raw DCE responses (resampling wave)
-│       ├── DRUID_resampling_covariates_anonymised_2024_10_31.xlsx     # raw covariates (resampling wave); 1,684 × 155
-│       ├── DRUID_resampling_timestamps_2024-10-31.xlsx                # raw survey timestamps (resampling wave)
+│       ├── DRUID_resampling_DCE_d2_test2_2024-10-31.xlsx              # raw DCE choice responses (resampling wave)
+│       ├── Data_Covariates_Step0.csv                                  # [input to 01] anonymised covariates + valuation timing; 1,684 × 158
 │       ├── Data_Covariates_Step1.csv                                  # [output of 01] wide-format covariates; 1,684 × 214
 │       ├── Data_Covariates_Step2.csv                                  # [output of 02] wide-format covariates; 1,684 × 220
 │       ├── Data_Covariates_Step3.csv                                  # [output of 03] wide-format covariates; 1,684 × 365
 │       ├── database_Step3.csv                                         # [output of 05] long-format CE data; 15,156 × 266
-│       ├── Data_Covariates_Spatial_Step5.csv                          # [output of 05] covariates with wellbeing LVs; 1,684 × 378
-│       └── Data_Covariates_Spatial_Step6_anonymised.csv               # [output of 06] covariates + class membership; 1,476 × 380
+│       ├── Data_Covariates_Step5.csv                                  # [output of 05] covariates with wellbeing factor scores; 1,684 × 378
+│       └── Data_Covariates_Step6.csv                                  # [output of 06] estimation sample with class membership; 1,476 × 380
 ├── Scripts/
 │   ├── Setup/
 │   │   ├── 01_Druid_Setup_CleaningMain.R
 │   │   ├── 02_Druid_Setup_DiscountingMain.R
 │   │   ├── 03_Druid_Setup_MergeCE.R
-│   │   ├── 04_Druid_Setup_Postcodes.R
+│   │   ├── 04_Druid_Setup_Postcodes.R                                  # diagnostic only — not run in replicator
 │   │   ├── 05_Druid_Setup_SlidersFactorAnalysis.R
 │   │   └── 06_Druid_Setup_ClassMembership.R
 │   ├── CEModelling/
@@ -48,7 +47,8 @@ D2Backup/
 │   │   ├── 14_Druid_TableB2_SampleVsPopulation.R                 # Table B2
 │   │   ├── 16_Druid_TableC3_WellbeingLVs.R                       # Table C3
 │   │   ├── 17_Druid_TableC1_SimulatedMeanWTP.R                   # Table C1
-│   │   └── 18_Druid_TableC2_ModelEstimates.R                     # Table C2
+│   │   ├── 18_Druid_TableC2_ModelEstimates.R                     # Table C2
+│   │   └── 19_Druid_Codebook.R                                   # Data codebook
 │   └── Figures/
 │       ├── 10_Druid_Figure2_WTPClasses.R                         # Figure 2
 │       ├── 11_Druid_Figure3_WellbeingDistribution.R              # Figure 3
@@ -76,7 +76,8 @@ D2Backup/
         ├── TableB2_SampleVsQuota.txt                              # [output of 14] Table B2
         ├── TableC1_SimulatedMeanWTP.csv                           # [output of 17] Table C1
         ├── TableC2_ModelEstimates.csv                             # [output of 18] Table C2
-        └── TableC3_WellbeingLVs.csv                               # [output of 16] Table C3
+        ├── TableC3_WellbeingLVs.csv                               # [output of 16] Table C3
+        └── D2_Codebook.xlsx                                       # [output of 19] data codebook (380 variables)
 ```
 
 #### Acknowledgements:

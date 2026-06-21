@@ -236,10 +236,10 @@ ggsave(
 
 ## Exporting as CSV for ease
 ## and using fwrite() is much faster than write.csv()
-Data_Covariates_Merged %>% 
-  fwrite(sep = ",", 
-         here("Data/Main", 
-              "Data_Covariates_Spatial_Step4.csv") )
+Data_Covariates_Merged %>%
+  fwrite(sep = ",",
+         here("Data/Main",
+              "Data_Covariates_Spatial_Step4_old.csv") )
 
 GB_Merged %>% st_write(here("Data/Main", 
                             "GB_D2_V1.gpkg"), append = FALSE)

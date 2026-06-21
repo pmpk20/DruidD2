@@ -138,7 +138,7 @@ database <- here("Data/Main", "database_Step3.csv") %>% fread() %>% data.frame()
 
 ## This is respondent data in wide format
 Data_Covariates <- here("Data/Main", 
-                        "Data_Covariates_Spatial_Step5.csv") %>% fread() %>% data.frame()
+                        "Data_Covariates_Step6.csv") %>% fread() %>% data.frame()
 
 
 
@@ -148,17 +148,19 @@ Data_Covariates <- here("Data/Main",
 # ****************************
 
 
+# ## Drop weird responses
+database <- database %>% dplyr::filter(SerialSQ != 1 &
+                                                       Protest_True == 1 &
+                                                       CE_ANA_None != 1)
+
+
 ## It is easier to grab serialSQ from database and append to wide
 Data_Covariates$SerialSQ <- database %>%
   distinct(Respondent, SerialSQ) %>%
   .$SerialSQ
-database <- here("Data/Main", "database_Step3.csv") %>% fread() %>% data.frame()
+# database <- here("Data/Main", "database_Step3.csv") %>% fread() %>% data.frame()
 
 
-# ## Drop weird responses
-Data_Covariates <- Data_Covariates %>% dplyr::filter(SerialSQ != 1 &
-                                                       Protest_True == 1 &
-                                                       CE_ANA_None != 1)
 
 ## Rescaling to ~[0,1]
 Data_Covariates$Biowell_Bee1_Mean = Data_Covariates$Biowell_Bee1_Mean %>% scale() %>% as.numeric()
@@ -218,6 +220,7 @@ Data_Covariates$AlwaysZero <- ifelse(Data_Covariates$QDiscounting_7 == 2, 1, 0)
 # ****************************
 
 
+## Import estimated model results
 Estimates <- here("CEOutput/Main/LCM",
                   "D2_Truncated_LC_3C_MXL_NoDR_V3_estimates.csv") %>%
   fread() %>% 
@@ -225,11 +228,12 @@ Estimates <- here("CEOutput/Main/LCM",
 
 
 
-
+## Importing the class allocation information here
 D2_Truncated_LC_3C_MXL_NoDR_V1_3C_UCWTP <- here("CEOutput/Main/LCM",
                                                 "D2_Truncated_LC_3C_MXL_NoDR_V3_model_PiValues.rds") %>% readRDS()
 
 
+## And the wider model information too
 Model <-
   here("CEOutput/Main/LCM", 
        "D2_Truncated_LC_3C_MXL_NoDR_V3_model.rds") %>% 
@@ -243,6 +247,7 @@ Label_Class1 <- Model$componentReport$choice$param[4][1] %>%
   multiply_by(100) %>% 
   paste0(., "%")
 
+
 Label_Class2 <- Model$componentReport$choice$param[5][1] %>% 
   str_remove_all("Class\\d+") %>% 
   trimws() %>% 
@@ -250,13 +255,13 @@ Label_Class2 <- Model$componentReport$choice$param[5][1] %>%
   multiply_by(100) %>% 
   paste0(., "%")
 
+
 Label_Class3 <- Model$componentReport$choice$param[6][1] %>% 
   str_remove_all("Class\\d+") %>% 
   trimws() %>% 
   as.numeric() %>% 
   multiply_by(100) %>% 
   paste0(., "%")
-
 
 
 # *************************************************************************

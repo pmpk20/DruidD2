@@ -31,11 +31,12 @@ library(GPArotation)
 # **********************************************************************************
 
 
-Data_Covariates <- here("Data/Main", "Data_Covariates_Spatial_Step4.csv") %>% fread() %>% data.frame()
+Data_Covariates <- here("Data/Main", "Data_Covariates_Step3.csv") %>% fread() %>% data.frame()
 database <- here("Data/Main", "database_Step2.csv") %>% fread() %>% data.frame()
 
 ## Subset the insects data to only have sliders responses
-Sliders <- Data_Covariates[c(122:133)] %>% data.frame() 
+# Sliders <- Data_Covariates[c(122:133)] %>% data.frame() 
+Sliders <- Data_Covariates %>% dplyr::select(starts_with("Sliding_")) %>% data.frame()
 
 
 # **********************************************************************************
@@ -96,10 +97,15 @@ database$Sliders_FA_PA4 <- Data_Covariates_WithAllFactors$Sliders_FA_PA4 %>% rep
 
 
 ## Exporting as CSV for ease
+# Data_Covariates_WithAllFactors %>%
+#   fwrite(sep = ",",
+#          here("Data/Main",
+#               "Data_Covariates_Spatial_Step5_old.csv"))
+
 Data_Covariates_WithAllFactors %>% 
   fwrite(sep = ",", 
          here("Data/Main", 
-              "Data_Covariates_Spatial_Step5.csv"))
+              "Data_Covariates_Step5.csv"))
 
 
 database %>% 

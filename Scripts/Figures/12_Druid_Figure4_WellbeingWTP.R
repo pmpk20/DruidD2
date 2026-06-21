@@ -127,8 +127,8 @@ all_results <- here("CEOutput/Main/LCM", "D2_Truncated_LC_3C_MXL_NoDR_V3_Simulat
   fread() %>% data.frame()
 
 
-all_results <- here("CEOutput/Main/LCM", "D2_Truncated_LC_3C_MXL_NoDR_V3_SimulatedMeans_Wide.csv") %>% 
-  fread() %>% data.frame()
+# all_results <- here("CEOutput/Main/LCM", "D2_Truncated_LC_3C_MXL_NoDR_V3_SimulatedMeans_Wide.csv") %>% 
+#   fread() %>% data.frame()
 
 
 

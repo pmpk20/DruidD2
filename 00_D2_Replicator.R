@@ -135,7 +135,7 @@ library(sessioninfo)
 here("Scripts/Setup/01_Druid_Setup_CleaningMain.R") %>% source()
 here("Scripts/Setup/02_Druid_Setup_DiscountingMain.R") %>% source()
 here("Scripts/Setup/03_Druid_Setup_MergeCE.R") %>% source()
-here("Scripts/Setup/04_Druid_Setup_Postcodes.R") %>% source()
+# here("Scripts/Setup/04_Druid_Setup_Postcodes.R") %>% source()
 here("Scripts/Setup/05_Druid_Setup_SlidersFactorAnalysis.R") %>% source()
 
 
@@ -174,6 +174,7 @@ here("Scripts/Figures/15_Druid_FigureC1_WTPClassesDistribution.R") %>% source() 
 here("Scripts/Tables/17_Druid_TableC1_SimulatedMeanWTP.R") %>% source()       # Table C1
 here("Scripts/Tables/18_Druid_TableC2_ModelEstimates.R") %>% source()         # Table C2
 here("Scripts/Tables/16_Druid_TableC3_WellbeingLVs.R") %>% source()           # Table C3
+here("Scripts/Tables/19_Druid_Codebook.R") %>% source()                      # Codebook
 
 
 # **********************************************************************************

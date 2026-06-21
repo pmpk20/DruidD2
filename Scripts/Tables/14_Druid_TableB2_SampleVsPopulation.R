@@ -76,7 +76,8 @@ library(rstatix)
 ## ****************************************************************************
 
 
-Data_Covariates <- fread(here("Data/Main", "Data_Covariates_Spatial_Step5_anonymised.csv"))
+## Using step5 bc it isn't truncated yet
+Data_Covariates <- fread(here("Data/Main", "Data_Covariates_Step5.csv"))
 
 
 ## ****************************************************************************

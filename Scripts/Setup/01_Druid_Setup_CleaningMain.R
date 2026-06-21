@@ -39,16 +39,10 @@ library(janitor)
 # **********************************************************************************
 
 
-Data_Covariates <-
-  here("Data/Main", "DRUID_resampling_covariates_anonymised_2024_10_31.xlsx") %>% 
-  readxl::read_xlsx(sheet = "Sheet1") %>% 
+Data_Covariates <- here("Data/Main", 
+                        "Data_Covariates_Step0.csv") %>% fread() %>% 
   data.frame()
 
-
-Data_Timers <-
-  here("Data/Main", "DRUID_resampling_timestamps_2024-10-31.xlsx") %>% 
-  readxl::read_xlsx(sheet = "Data") %>% 
-  data.frame()
 
 
 Data_CE <-
@@ -56,6 +50,17 @@ Data_CE <-
   readxl::read_xlsx(sheet = "Data") %>% 
   data.frame()
 
+
+## Here is how we did this script first time around
+### NOTE: I am withholding the raw + timer data because of PII
+# Data_Covariates <-
+#   here("Data/Main", "DRUID_resampling_covariates_anonymised_2024_10_31.xlsx") %>% 
+#   readxl::read_xlsx(sheet = "Sheet1") %>% 
+#   data.frame()
+# Data_Timers <-
+#   here("Data/Main", "DRUID_resampling_timestamps_2024-10-31.xlsx") %>% 
+#   readxl::read_xlsx(sheet = "Data") %>% 
+#   data.frame()
 
 
 # **********************************************************************************
@@ -113,8 +118,8 @@ Data_Covariates %>%
 
 
 ## Append and name 
-Data_Covariates$Valuation_Start <- Data_Timers$PAGE_DISPLAY_13 %>% as.numeric()
-Data_Covariates$Valuation_Finish <- Data_Timers$PAGE_SUBMIT_33 %>% as.numeric()
+# Data_Covariates$Valuation_Start <- Data_Timers$PAGE_DISPLAY_13 %>% as.numeric()
+# Data_Covariates$Valuation_Finish <- Data_Timers$PAGE_SUBMIT_33 %>% as.numeric()
 Data_Covariates$Valuation_CompletionTime <-  Data_Covariates$Valuation_Finish - Data_Covariates$Valuation_Start
 
 Data_Covariates <- 

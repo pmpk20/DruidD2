@@ -131,15 +131,9 @@ library(tidyr)
 # ****************************
 
 
-## This is respondent data in long format
-database <- here("Data/Main", "database_Step3.csv") %>% fread() %>% data.frame()
-
-
 ## This is respondent data in wide format
 Data_Covariates <- here("Data/Main", 
-                        "Data_Covariates_Spatial_Step5.csv") %>% fread() %>% data.frame()
-
-
+                        "Data_Covariates_Step6.csv") %>% fread() %>% data.frame()
 
 
 # ****************************
@@ -147,17 +141,17 @@ Data_Covariates <- here("Data/Main",
 # ****************************
 
 
-## It is easier to grab serialSQ from database and append to wide
-Data_Covariates$SerialSQ <- database %>%
-  distinct(Respondent, SerialSQ) %>%
-  .$SerialSQ
-database <- here("Data/Main", "database_Step3.csv") %>% fread() %>% data.frame()
-
-
-# ## Drop weird responses
-Data_Covariates <- Data_Covariates %>% dplyr::filter(SerialSQ != 1 &
-                                                       Protest_True == 1 &
-                                                       CE_ANA_None != 1)
+# ## It is easier to grab serialSQ from database and append to wide
+# Data_Covariates$SerialSQ <- database %>%
+#   distinct(Respondent, SerialSQ) %>%
+#   .$SerialSQ
+# database <- here("Data/Main", "database_Step3.csv") %>% fread() %>% data.frame()
+# 
+# 
+# # ## Drop weird responses
+# Data_Covariates <- Data_Covariates %>% dplyr::filter(SerialSQ != 1 &
+#                                                        Protest_True == 1 &
+#                                                        CE_ANA_None != 1)
 
 ## Rescaling to ~[0,1]
 Data_Covariates$Biowell_Bee1_Mean = Data_Covariates$Biowell_Bee1_Mean %>% scale() %>% as.numeric()

@@ -18,10 +18,20 @@ Data/TestDesign_3009_V3.xlsx
 # Shapefile county boundaries (not used in replication scripts)
 Data/Counties_and_Unitary_Authorities_*
 
-# Data/Main: only database_Step3.csv is committed; anonymised CSVs still contain
-# Postcode / latitude / longitude / IP_repeat_group — DO NOT commit until stripped.
-Data/Main/Data_Covariates_*.csv
+# Data/Main: raw SurveyEngine exports are withheld (contain PII / unnecessary columns).
+# Anonymised pipeline files (Step0–Step6, database_Step3, DCE xlsx) are committed.
+# See commented block in 01_Druid_Setup_CleaningMain.R for what was withheld and why.
+Data/Main/DRUID_resampling_covariates_anonymised_2024_10_31.xlsx
+Data/Main/DRUID_resampling_covariates_2024-10-31.xlsx
+Data/Main/DRUID_resampling_covariates_2024-10-31_backup.xlsx
+Data/Main/DRUID_resampling_timestamps_2024-10-31.xlsx
+Data/Main/DRUID_main_*
+Data/Main/Data_Covariates_Spatial_*
+Data/Main/Data_Covariates_Step4.csv
+Data/Main/GB_D2_V1.gpkg
 Data/Main/database_Step2.csv
+Data/Main/delivery*/
+Data/Main/*.zip
 
 # RStudio project file
 D2Backup.Rproj
