@@ -1,0 +1,1004 @@
+Preparing user-defined functions.
+
+Testing likelihood function...
+Apollo found a model component of type classAlloc
+  without a componentName. The name was set to
+  "classAlloc" by default.
+INFORMATION: Setting "avail" is missing, so full availability is
+  assumed. 
+
+Overview of choices for MNL model component Class1:
+                                        A        B       C
+Times available                  13284.00 13284.00 13284.0
+Times chosen                      4449.00  5328.00  3507.0
+Percentage chosen overall           33.49    40.11    26.4
+Percentage chosen when available    33.49    40.11    26.4
+
+
+Overview of choices for MNL model component Class2:
+                                        A        B       C
+Times available                  13284.00 13284.00 13284.0
+Times chosen                      4449.00  5328.00  3507.0
+Percentage chosen overall           33.49    40.11    26.4
+Percentage chosen when available    33.49    40.11    26.4
+
+
+Overview of choices for MNL model component Class3:
+                                        A        B       C
+Times available                  13284.00 13284.00 13284.0
+Times chosen                      4449.00  5328.00  3507.0
+Percentage chosen overall           33.49    40.11    26.4
+Percentage chosen when available    33.49    40.11    26.4
+
+
+Summary of class allocation for model component :
+        Mean prob.
+Class1      0.4196
+Class2      0.2541
+Class3      0.3263
+The class allocation probabilities for model
+  component "model" are calculated at the observation
+  level in 'apollo_lcPars', but are used in
+  'apollo_probabilities' to multiply within class
+  probabilities that are at the individual level.
+  Apollo will average the class allocation
+  probabilities across observations for the same
+  individual level before using them to multiply the
+  within-class probabilities. If your class
+  allocation probabilities are constant across choice
+  situations for the same individual, then this is of
+  no concern. If your class allocation probabilities
+  however vary across choice tasks, then you should
+  change your model specification in
+  'apollo_probabilities' to only call
+  'apollo_panelProd' after calling 'apollo_lc'.
+
+Pre-processing likelihood function...
+Creating cluster...
+Preparing workers for multithreading...
+
+Testing influence of parameters
+Starting main estimation
+
+BGW using analytic model derivatives supplied by caller...
+
+
+Iterates will be written to: 
+ CEOutput/Main/LCM/D2_Truncated_LC_3C_MXL_NoDR_V3_iterations.csv
+    it    nf     F            RELDF    PRELDF    RELDX    MODEL stppar
+     0     1 1.238938803e+04
+     1     3 1.227738482e+04 9.040e-03 9.632e-03 7.66e-03   G   6.58e+00
+     2     5 1.209595840e+04 1.478e-02 1.182e-02 4.26e-02   G   9.09e-03
+     3     6 1.197073625e+04 1.035e-02 6.114e-03 8.82e-02   S   3.14e-03
+     4     9 1.191221847e+04 4.888e-03 2.848e-03 5.36e-02  S-G  7.30e-03
+     5    10 1.182239695e+04 7.540e-03 4.575e-03 5.72e-02   S   4.32e-03
+     6    13 1.178795960e+04 2.913e-03 1.744e-03 2.86e-02  S-G  5.74e-02
+     7    14 1.173154109e+04 4.786e-03 3.456e-03 6.94e-02   S   2.64e-02
+     8    15 1.172204490e+04 8.095e-04 8.085e-04 4.63e-02   S   1.05e-02
+     9    17 1.172073040e+04 1.121e-04 1.121e-04 4.86e-03   S   1.31e-01
+    10    19 1.172008159e+04 5.535e-05 3.709e-05 7.70e-03   S   1.22e-02
+    11    21 1.168477126e+04 3.013e-03 1.922e-04 5.21e-03   S   5.09e+00
+    12    22 1.166922047e+04 1.331e-03 8.968e-04 7.44e-02   S   0.00e+00
+    13    23 1.166286175e+04 5.449e-04 4.991e-04 2.95e-02   S   0.00e+00
+    14    24 1.166097994e+04 1.614e-04 1.368e-04 3.97e-02   S   0.00e+00
+    15    25 1.162184609e+04 3.356e-03 5.598e-05 1.48e-02   S   0.00e+00
+    16    26 1.161545489e+04 5.499e-04 4.022e-03 1.52e-01   S   0.00e+00
+    17    29 1.159430723e+04 1.821e-03 2.152e-03 3.01e-02   S   1.14e-01
+    18    30 1.158286761e+04 9.867e-04 9.345e-04 2.40e-02   G   2.99e-02
+    19    31 1.157820340e+04 4.027e-04 4.102e-04 3.44e-02   G   1.09e-02
+    20    32 1.157659419e+04 1.390e-04 2.486e-04 3.06e-02   G   0.00e+00
+    21    33 1.157400448e+04 2.237e-04 1.827e-04 1.84e-02   S   0.00e+00
+    22    34 1.157258491e+04 1.227e-04 7.891e-05 1.18e-02   S   0.00e+00
+    23    35 1.157114883e+04 1.241e-04 9.569e-05 1.92e-02   S   0.00e+00
+    24    36 1.157051212e+04 5.503e-05 3.800e-05 1.21e-02   S   0.00e+00
+    25    37 1.157002533e+04 4.207e-05 3.110e-05 2.15e-02   S   0.00e+00
+    26    38 1.156974458e+04 2.427e-05 1.692e-05 1.44e-02   S   0.00e+00
+    27    39 1.156954454e+04 1.729e-05 1.262e-05 1.82e-02   S   0.00e+00
+    28    40 1.156942893e+04 9.993e-06 7.333e-06 7.65e-03   S   0.00e+00
+    29    41 1.156935186e+04 6.661e-06 5.317e-06 1.49e-02   S   0.00e+00
+    30    42 1.156929644e+04 4.790e-06 3.520e-06 3.36e-03   S   0.00e+00
+    31    43 1.156924466e+04 4.476e-06 2.911e-06 3.98e-03   S   0.00e+00
+    32    44 1.156919124e+04 4.617e-06 3.416e-06 5.54e-03   S   0.00e+00
+    33    45 1.156915954e+04 2.740e-06 1.854e-06 2.82e-03   S   0.00e+00
+    34    46 1.156913213e+04 2.369e-06 1.729e-06 3.76e-03   S   0.00e+00
+    35    47 1.156911460e+04 1.515e-06 1.049e-06 1.47e-03   S   0.00e+00
+    36    48 1.156910090e+04 1.185e-06 8.481e-07 1.52e-03   S   0.00e+00
+    37    49 1.156909205e+04 7.651e-07 5.373e-07 1.00e-03   S   0.00e+00
+    38    50 1.156908618e+04 5.072e-07 3.680e-07 1.21e-03   S   0.00e+00
+    39    51 1.156908291e+04 2.825e-07 2.068e-07 1.09e-03   S   0.00e+00
+    40    52 1.156908113e+04 1.537e-07 1.169e-07 5.30e-04   S   0.00e+00
+    41    53 1.156908028e+04 7.324e-08 5.493e-08 4.85e-04   S   0.00e+00
+    42    54 1.156907990e+04 3.280e-08 2.518e-08 2.19e-04   S   0.00e+00
+    43    55 1.156907978e+04 1.102e-08 8.756e-09 1.55e-04   S   0.00e+00
+    44    56 1.156907974e+04 3.206e-09 2.622e-09 1.94e-04   S   0.00e+00
+    45    57 1.156907973e+04 1.073e-09 8.278e-10 6.24e-05   S   0.00e+00
+    46    58 1.156907972e+04 4.483e-10 3.339e-10 6.83e-05   S   0.00e+00
+    47    59 1.156907972e+04 1.810e-10 1.419e-10 3.48e-05   S   0.00e+00
+    48    60 1.156907972e+04 5.386e-11 4.359e-11 1.95e-05   S   0.00e+00
+
+***** Relative function convergence *****
+
+Estimated parameters with approximate standard errors
+  from BHHH matrix:
+                                                  Estimate
+asc_C_Class1                                     -0.633970
+asc_C_Class2                                      0.066471
+asc_C_Class3                                     -3.294401
+beta_Tax_Class1                                  -0.027856
+beta_Tax_Class2                                  -0.063810
+beta_Tax_Class3                                  -0.100168
+b_Encounter_Medium_Class1                        18.006256
+b_Encounter_High_Class1                          22.068061
+b_Existence_Medium_Class1                        13.147568
+b_Existence_High_Class1                          17.882331
+b_Bequest_Medium_Class1                          16.261818
+b_Bequest_High_Class1                            40.959352
+Int_Encounter_Medium_Bee_Class1                  -7.974139
+Int_Encounter_High_Bee_Class1                    12.915453
+Int_Existence_Medium_Bee_Class1                 -20.050781
+Int_Existence_High_Bee_Class1                    18.513300
+Int_Bequest_Medium_Bee_Class1                     8.954539
+Int_Bequest_High_Bee_Class1                       7.069778
+Int_Existence_Medium_Wasp_Class1                  3.463971
+Int_Existence_High_Wasp_Class1                    5.610533
+Int_Encounter_Medium_Wasp_Class1                  8.016886
+Int_Encounter_High_Wasp_Class1                    6.451673
+Int_Bequest_Medium_Wasp_Class1                  -13.685300
+Int_Bequest_High_Wasp_Class1                    -18.572540
+b_Encounter_Medium_Class2                        -8.922256
+b_Encounter_High_Class2                         -15.932794
+b_Existence_Medium_Class2                        -9.070644
+b_Existence_High_Class2                         -19.473832
+b_Bequest_Medium_Class2                          14.273451
+b_Bequest_High_Class2                            -1.803381
+Int_Encounter_Medium_Bee_Class2                  -1.007280
+Int_Encounter_High_Bee_Class2                    21.509593
+Int_Existence_Medium_Bee_Class2                  18.584215
+Int_Existence_High_Bee_Class2                    18.680190
+Int_Bequest_Medium_Bee_Class2                   -16.552717
+Int_Bequest_High_Bee_Class2                       4.163401
+Int_Existence_Medium_Wasp_Class2                  8.839706
+Int_Existence_High_Wasp_Class2                   -2.668597
+Int_Encounter_Medium_Wasp_Class2                  2.857927
+Int_Encounter_High_Wasp_Class2                  -10.298339
+Int_Bequest_Medium_Wasp_Class2                   -6.920642
+Int_Bequest_High_Wasp_Class2                     -0.836963
+b_Encounter_Medium_Class3                        -0.264712
+b_Encounter_High_Class3                          -1.726911
+b_Existence_Medium_Class3                         9.133525
+b_Existence_High_Class3                          -5.113772
+b_Bequest_Medium_Class3                         -16.238085
+b_Bequest_High_Class3                            -3.418844
+Int_Encounter_Medium_Bee_Class3                  -7.398179
+Int_Encounter_High_Bee_Class3                    -3.670155
+Int_Existence_Medium_Bee_Class3                  -5.033128
+Int_Existence_High_Bee_Class3                    -3.782032
+Int_Bequest_Medium_Bee_Class3                    16.736983
+Int_Bequest_High_Bee_Class3                      -5.484906
+Int_Existence_Medium_Wasp_Class3                -24.555185
+Int_Existence_High_Wasp_Class3                  -13.492095
+Int_Encounter_Medium_Wasp_Class3                 63.902091
+Int_Encounter_High_Wasp_Class3                   29.779082
+Int_Bequest_Medium_Wasp_Class3                  -36.516544
+Int_Bequest_High_Wasp_Class3                    -43.700544
+delta_Class1                                      4.635888
+delta_Class2                                      1.943427
+ClassAllocation_C1_Q1Age                         -0.023025
+ClassAllocation_C1_Income                         0.159690
+ClassAllocation_C1_Female_dummy                  -0.394206
+ClassAllocation_C1_Q3Country_England              0.145930
+ClassAllocation_C1_CE_Debrief_Certain_scaled     -0.128466
+ClassAllocation_C1_CE_Debrief_Confident_scaled    0.181799
+ClassAllocation_C1_Q43_Citizen                   -1.735006
+ClassAllocation_C1_AlwaysZero                    -1.660027
+ClassAllocation_C2_Q1Age                         -0.006146
+ClassAllocation_C2_Income                        -0.011022
+ClassAllocation_C2_Female_dummy                   0.323320
+ClassAllocation_C2_Q3Country_England             -0.335053
+ClassAllocation_C2_CE_Debrief_Certain_scaled     -0.012161
+ClassAllocation_C2_CE_Debrief_Confident_scaled   -0.172062
+ClassAllocation_C2_Q43_Citizen                   -0.399156
+ClassAllocation_C2_AlwaysZero                    -1.149935
+                                                   BHHH se
+asc_C_Class1                                      0.097499
+asc_C_Class2                                      0.172423
+asc_C_Class3                                      0.282885
+beta_Tax_Class1                                   0.003300
+beta_Tax_Class2                                   0.005810
+beta_Tax_Class3                                   0.008477
+b_Encounter_Medium_Class1                         3.271071
+b_Encounter_High_Class1                           4.201460
+b_Existence_Medium_Class1                         3.938901
+b_Existence_High_Class1                           4.824918
+b_Bequest_Medium_Class1                           5.580132
+b_Bequest_High_Class1                             7.404890
+Int_Encounter_Medium_Bee_Class1                   5.708419
+Int_Encounter_High_Bee_Class1                     5.686445
+Int_Existence_Medium_Bee_Class1                   5.549237
+Int_Existence_High_Bee_Class1                     7.066174
+Int_Bequest_Medium_Bee_Class1                     9.158239
+Int_Bequest_High_Bee_Class1                       7.373623
+Int_Existence_Medium_Wasp_Class1                  5.243542
+Int_Existence_High_Wasp_Class1                    5.765945
+Int_Encounter_Medium_Wasp_Class1                  7.641034
+Int_Encounter_High_Wasp_Class1                    7.903313
+Int_Bequest_Medium_Wasp_Class1                    8.703009
+Int_Bequest_High_Wasp_Class1                      8.487113
+b_Encounter_Medium_Class2                         4.068405
+b_Encounter_High_Class2                           4.706485
+b_Existence_Medium_Class2                         4.035043
+b_Existence_High_Class2                           4.749875
+b_Bequest_Medium_Class2                           4.192540
+b_Bequest_High_Class2                             3.392105
+Int_Encounter_Medium_Bee_Class2                   5.099332
+Int_Encounter_High_Bee_Class2                     3.821173
+Int_Existence_Medium_Bee_Class2                   5.564589
+Int_Existence_High_Bee_Class2                     3.876875
+Int_Bequest_Medium_Bee_Class2                     6.062463
+Int_Bequest_High_Bee_Class2                       3.481783
+Int_Existence_Medium_Wasp_Class2                  4.649437
+Int_Existence_High_Wasp_Class2                    4.307640
+Int_Encounter_Medium_Wasp_Class2                  3.625528
+Int_Encounter_High_Wasp_Class2                    4.149608
+Int_Bequest_Medium_Wasp_Class2                    5.011059
+Int_Bequest_High_Wasp_Class2                      4.329649
+b_Encounter_Medium_Class3                         3.206812
+b_Encounter_High_Class3                           5.168393
+b_Existence_Medium_Class3                         3.369430
+b_Existence_High_Class3                           3.861930
+b_Bequest_Medium_Class3                           3.914411
+b_Bequest_High_Class3                             3.678280
+Int_Encounter_Medium_Bee_Class3                   3.964610
+Int_Encounter_High_Bee_Class3                     5.171623
+Int_Existence_Medium_Bee_Class3                   4.618006
+Int_Existence_High_Bee_Class3                     3.593264
+Int_Bequest_Medium_Bee_Class3                     5.139001
+Int_Bequest_High_Bee_Class3                       4.851930
+Int_Existence_Medium_Wasp_Class3                  4.491101
+Int_Existence_High_Wasp_Class3                    3.739536
+Int_Encounter_Medium_Wasp_Class3                 16.651883
+Int_Encounter_High_Wasp_Class3                   10.595661
+Int_Bequest_Medium_Wasp_Class3                   10.382782
+Int_Bequest_High_Wasp_Class3                     10.785360
+delta_Class1                                      0.595700
+delta_Class2                                      0.624080
+ClassAllocation_C1_Q1Age                          0.004941
+ClassAllocation_C1_Income                         0.083151
+ClassAllocation_C1_Female_dummy                   0.161034
+ClassAllocation_C1_Q3Country_England              0.257017
+ClassAllocation_C1_CE_Debrief_Certain_scaled      0.097154
+ClassAllocation_C1_CE_Debrief_Confident_scaled    0.098787
+ClassAllocation_C1_Q43_Citizen                    0.365109
+ClassAllocation_C1_AlwaysZero                     0.380653
+ClassAllocation_C2_Q1Age                          0.005035
+ClassAllocation_C2_Income                         0.084719
+ClassAllocation_C2_Female_dummy                   0.162687
+ClassAllocation_C2_Q3Country_England              0.231367
+ClassAllocation_C2_CE_Debrief_Certain_scaled      0.097874
+ClassAllocation_C2_CE_Debrief_Confident_scaled    0.095703
+ClassAllocation_C2_Q43_Citizen                    0.419230
+ClassAllocation_C2_AlwaysZero                     0.404812
+                                               BHH t-ratio (0)
+asc_C_Class1                                          -6.50230
+asc_C_Class2                                           0.38551
+asc_C_Class3                                         -11.64573
+beta_Tax_Class1                                       -8.44166
+beta_Tax_Class2                                      -10.98191
+beta_Tax_Class3                                      -11.81628
+b_Encounter_Medium_Class1                              5.50470
+b_Encounter_High_Class1                                5.25247
+b_Existence_Medium_Class1                              3.33788
+b_Existence_High_Class1                                3.70625
+b_Bequest_Medium_Class1                                2.91424
+b_Bequest_High_Class1                                  5.53139
+Int_Encounter_Medium_Bee_Class1                       -1.39691
+Int_Encounter_High_Bee_Class1                          2.27127
+Int_Existence_Medium_Bee_Class1                       -3.61325
+Int_Existence_High_Bee_Class1                          2.61999
+Int_Bequest_Medium_Bee_Class1                          0.97776
+Int_Bequest_High_Bee_Class1                            0.95879
+Int_Existence_Medium_Wasp_Class1                       0.66062
+Int_Existence_High_Wasp_Class1                         0.97305
+Int_Encounter_Medium_Wasp_Class1                       1.04919
+Int_Encounter_High_Wasp_Class1                         0.81633
+Int_Bequest_Medium_Wasp_Class1                        -1.57248
+Int_Bequest_High_Wasp_Class1                          -2.18832
+b_Encounter_Medium_Class2                             -2.19306
+b_Encounter_High_Class2                               -3.38529
+b_Existence_Medium_Class2                             -2.24797
+b_Existence_High_Class2                               -4.09986
+b_Bequest_Medium_Class2                                3.40449
+b_Bequest_High_Class2                                 -0.53164
+Int_Encounter_Medium_Bee_Class2                       -0.19753
+Int_Encounter_High_Bee_Class2                          5.62906
+Int_Existence_Medium_Bee_Class2                        3.33973
+Int_Existence_High_Bee_Class2                          4.81836
+Int_Bequest_Medium_Bee_Class2                         -2.73036
+Int_Bequest_High_Bee_Class2                            1.19577
+Int_Existence_Medium_Wasp_Class2                       1.90124
+Int_Existence_High_Wasp_Class2                        -0.61950
+Int_Encounter_Medium_Wasp_Class2                       0.78828
+Int_Encounter_High_Wasp_Class2                        -2.48176
+Int_Bequest_Medium_Wasp_Class2                        -1.38107
+Int_Bequest_High_Wasp_Class2                          -0.19331
+b_Encounter_Medium_Class3                             -0.08255
+b_Encounter_High_Class3                               -0.33413
+b_Existence_Medium_Class3                              2.71070
+b_Existence_High_Class3                               -1.32415
+b_Bequest_Medium_Class3                               -4.14828
+b_Bequest_High_Class3                                 -0.92947
+Int_Encounter_Medium_Bee_Class3                       -1.86605
+Int_Encounter_High_Bee_Class3                         -0.70967
+Int_Existence_Medium_Bee_Class3                       -1.08989
+Int_Existence_High_Bee_Class3                         -1.05253
+Int_Bequest_Medium_Bee_Class3                          3.25686
+Int_Bequest_High_Bee_Class3                           -1.13046
+Int_Existence_Medium_Wasp_Class3                      -5.46752
+Int_Existence_High_Wasp_Class3                        -3.60796
+Int_Encounter_Medium_Wasp_Class3                       3.83753
+Int_Encounter_High_Wasp_Class3                         2.81050
+Int_Bequest_Medium_Wasp_Class3                        -3.51703
+Int_Bequest_High_Wasp_Class3                          -4.05184
+delta_Class1                                           7.78226
+delta_Class2                                           3.11407
+ClassAllocation_C1_Q1Age                              -4.66050
+ClassAllocation_C1_Income                              1.92048
+ClassAllocation_C1_Female_dummy                       -2.44797
+ClassAllocation_C1_Q3Country_England                   0.56778
+ClassAllocation_C1_CE_Debrief_Certain_scaled          -1.32228
+ClassAllocation_C1_CE_Debrief_Confident_scaled         1.84031
+ClassAllocation_C1_Q43_Citizen                        -4.75203
+ClassAllocation_C1_AlwaysZero                         -4.36100
+ClassAllocation_C2_Q1Age                              -1.22079
+ClassAllocation_C2_Income                             -0.13010
+ClassAllocation_C2_Female_dummy                        1.98737
+ClassAllocation_C2_Q3Country_England                  -1.44815
+ClassAllocation_C2_CE_Debrief_Certain_scaled          -0.12425
+ClassAllocation_C2_CE_Debrief_Confident_scaled        -1.79788
+ClassAllocation_C2_Q43_Citizen                        -0.95212
+ClassAllocation_C2_AlwaysZero                         -2.84067
+
+Final LL: -11569.0797
+
+
+Summary of class allocation for model component :
+        Mean prob.
+Class1      0.4417
+Class2      0.2911
+Class3      0.2672
+
+Calculating log-likelihood at equal shares (LL(0))
+  for applicable models...
+Calculating log-likelihood at observed shares from
+  estimation data (LL(c)) for applicable models...
+Calculating LL of each model component...
+Calculating other model fit measures
+Computing covariance matrix using numerical jacobian
+  of analytical gradient.
+ 0%....25%....50%....75%....100%
+Negative definite Hessian with maximum
+  eigenvalue: -0.001391
+Computing score matrix...
+
+Your model was estimated using the BGW
+  algorithm. Please acknowledge this by citing
+  Bunch et al. (1993) -
+  doi.org/10.1145/151271.151279
+
+Please acknowledge the use of Apollo by citing
+  Hess & Palma (2019) -
+  doi.org/10.1016/j.jocm.2019.100170
+Model run by earpkin using Apollo 0.3.5 on R 4.5.0 for Windows.
+Please acknowledge the use of Apollo by citing Hess & Palma (2019)
+  DOI 10.1016/j.jocm.2019.100170
+  www.ApolloChoiceModelling.com
+
+Model name                                  : D2_Truncated_LC_3C_MXL_NoDR_V3
+Model description                           : So hybrid idea but not hybrid
+Model run at                                : 2025-05-29 17:36:18.83869
+Estimation method                           : bgw
+Model diagnosis                             : Relative function convergence
+Optimisation diagnosis                      : Maximum found
+     hessian properties                     : Negative definite
+     maximum eigenvalue                     : -0.001391
+     reciprocal of condition number         : 1.40133e-09
+Number of individuals                       : 1476
+Number of rows in database                  : 13284
+Number of modelled outcomes                 : 13284
+
+Number of cores used                        :  4 
+Model without mixing
+
+LL(start)                                   : -12389.39
+LL (whole model) at equal shares, LL(0)     : -14593.97
+LL (whole model) at observed shares, LL(C)  : -14404.87
+LL(final, whole model)                      : -11569.08
+Rho-squared vs equal shares                  :  0.2073 
+Adj.Rho-squared vs equal shares              :  0.2019 
+Rho-squared vs observed shares               :  0.1969 
+Adj.Rho-squared vs observed shares           :  0.1919 
+AIC                                         :  23294.16 
+BIC                                         :  23878.72 
+
+LL(0,Class1)                     : -14593.97
+LL(final,Class1)                 : -15751.53
+LL(0,Class2)                     : -14593.97
+LL(final,Class2)                 : -19265.35
+LL(0,Class3)                     : -14593.97
+LL(final,Class3)                 : -21577.86
+
+Estimated parameters                        : 78
+Time taken (hh:mm:ss)                       :  00:05:37.98 
+     pre-estimation                         :  00:00:15 
+     estimation                             :  00:00:44.45 
+     post-estimation                        :  00:04:38.52 
+Iterations                                  :  48  
+
+Unconstrained optimisation.
+
+Estimates:
+                                                  Estimate
+asc_C_Class1                                     -0.633970
+asc_C_Class2                                      0.066471
+asc_C_Class3                                     -3.294401
+beta_Tax_Class1                                  -0.027856
+beta_Tax_Class2                                  -0.063810
+beta_Tax_Class3                                  -0.100168
+b_Encounter_Medium_Class1                        18.006256
+b_Encounter_High_Class1                          22.068061
+b_Existence_Medium_Class1                        13.147568
+b_Existence_High_Class1                          17.882331
+b_Bequest_Medium_Class1                          16.261818
+b_Bequest_High_Class1                            40.959352
+Int_Encounter_Medium_Bee_Class1                  -7.974139
+Int_Encounter_High_Bee_Class1                    12.915453
+Int_Existence_Medium_Bee_Class1                 -20.050781
+Int_Existence_High_Bee_Class1                    18.513300
+Int_Bequest_Medium_Bee_Class1                     8.954539
+Int_Bequest_High_Bee_Class1                       7.069778
+Int_Existence_Medium_Wasp_Class1                  3.463971
+Int_Existence_High_Wasp_Class1                    5.610533
+Int_Encounter_Medium_Wasp_Class1                  8.016886
+Int_Encounter_High_Wasp_Class1                    6.451673
+Int_Bequest_Medium_Wasp_Class1                  -13.685300
+Int_Bequest_High_Wasp_Class1                    -18.572540
+b_Encounter_Medium_Class2                        -8.922256
+b_Encounter_High_Class2                         -15.932794
+b_Existence_Medium_Class2                        -9.070644
+b_Existence_High_Class2                         -19.473832
+b_Bequest_Medium_Class2                          14.273451
+b_Bequest_High_Class2                            -1.803381
+Int_Encounter_Medium_Bee_Class2                  -1.007280
+Int_Encounter_High_Bee_Class2                    21.509593
+Int_Existence_Medium_Bee_Class2                  18.584215
+Int_Existence_High_Bee_Class2                    18.680190
+Int_Bequest_Medium_Bee_Class2                   -16.552717
+Int_Bequest_High_Bee_Class2                       4.163401
+Int_Existence_Medium_Wasp_Class2                  8.839706
+Int_Existence_High_Wasp_Class2                   -2.668597
+Int_Encounter_Medium_Wasp_Class2                  2.857927
+Int_Encounter_High_Wasp_Class2                  -10.298339
+Int_Bequest_Medium_Wasp_Class2                   -6.920642
+Int_Bequest_High_Wasp_Class2                     -0.836963
+b_Encounter_Medium_Class3                        -0.264712
+b_Encounter_High_Class3                          -1.726911
+b_Existence_Medium_Class3                         9.133525
+b_Existence_High_Class3                          -5.113772
+b_Bequest_Medium_Class3                         -16.238085
+b_Bequest_High_Class3                            -3.418844
+Int_Encounter_Medium_Bee_Class3                  -7.398179
+Int_Encounter_High_Bee_Class3                    -3.670155
+Int_Existence_Medium_Bee_Class3                  -5.033128
+Int_Existence_High_Bee_Class3                    -3.782032
+Int_Bequest_Medium_Bee_Class3                    16.736983
+Int_Bequest_High_Bee_Class3                      -5.484906
+Int_Existence_Medium_Wasp_Class3                -24.555185
+Int_Existence_High_Wasp_Class3                  -13.492095
+Int_Encounter_Medium_Wasp_Class3                 63.902091
+Int_Encounter_High_Wasp_Class3                   29.779082
+Int_Bequest_Medium_Wasp_Class3                  -36.516544
+Int_Bequest_High_Wasp_Class3                    -43.700544
+delta_Class1                                      4.635888
+delta_Class2                                      1.943427
+ClassAllocation_C1_Q1Age                         -0.023025
+ClassAllocation_C1_Income                         0.159690
+ClassAllocation_C1_Female_dummy                  -0.394206
+ClassAllocation_C1_Q3Country_England              0.145930
+ClassAllocation_C1_CE_Debrief_Certain_scaled     -0.128466
+ClassAllocation_C1_CE_Debrief_Confident_scaled    0.181799
+ClassAllocation_C1_Q43_Citizen                   -1.735006
+ClassAllocation_C1_AlwaysZero                    -1.660027
+ClassAllocation_C2_Q1Age                         -0.006146
+ClassAllocation_C2_Income                        -0.011022
+ClassAllocation_C2_Female_dummy                   0.323320
+ClassAllocation_C2_Q3Country_England             -0.335053
+ClassAllocation_C2_CE_Debrief_Certain_scaled     -0.012161
+ClassAllocation_C2_CE_Debrief_Confident_scaled   -0.172062
+ClassAllocation_C2_Q43_Citizen                   -0.399156
+ClassAllocation_C2_AlwaysZero                    -1.149935
+                                                      s.e.
+asc_C_Class1                                      0.113943
+asc_C_Class2                                      0.165105
+asc_C_Class3                                      0.283761
+beta_Tax_Class1                                   0.003180
+beta_Tax_Class2                                   0.006077
+beta_Tax_Class3                                   0.009370
+b_Encounter_Medium_Class1                         3.221142
+b_Encounter_High_Class1                           3.938409
+b_Existence_Medium_Class1                         3.669497
+b_Existence_High_Class1                           4.306632
+b_Bequest_Medium_Class1                           4.789513
+b_Bequest_High_Class1                             6.580163
+Int_Encounter_Medium_Bee_Class1                   5.137531
+Int_Encounter_High_Bee_Class1                     5.097036
+Int_Existence_Medium_Bee_Class1                   5.366841
+Int_Existence_High_Bee_Class1                     6.177064
+Int_Bequest_Medium_Bee_Class1                     7.364615
+Int_Bequest_High_Bee_Class1                       6.425909
+Int_Existence_Medium_Wasp_Class1                  4.830721
+Int_Existence_High_Wasp_Class1                    5.824433
+Int_Encounter_Medium_Wasp_Class1                  7.200898
+Int_Encounter_High_Wasp_Class1                    6.952311
+Int_Bequest_Medium_Wasp_Class1                    6.916050
+Int_Bequest_High_Wasp_Class1                      7.101189
+b_Encounter_Medium_Class2                         3.464270
+b_Encounter_High_Class2                           4.096857
+b_Existence_Medium_Class2                         3.639794
+b_Existence_High_Class2                           4.066936
+b_Bequest_Medium_Class2                           3.735515
+b_Bequest_High_Class2                             3.007211
+Int_Encounter_Medium_Bee_Class2                   4.246804
+Int_Encounter_High_Bee_Class2                     3.860310
+Int_Existence_Medium_Bee_Class2                   4.972361
+Int_Existence_High_Bee_Class2                     3.827936
+Int_Bequest_Medium_Bee_Class2                     5.046558
+Int_Bequest_High_Bee_Class2                       3.544481
+Int_Existence_Medium_Wasp_Class2                  3.993938
+Int_Existence_High_Wasp_Class2                    4.462090
+Int_Encounter_Medium_Wasp_Class2                  3.631617
+Int_Encounter_High_Wasp_Class2                    4.544524
+Int_Bequest_Medium_Wasp_Class2                    4.064756
+Int_Bequest_High_Wasp_Class2                      3.976480
+b_Encounter_Medium_Class3                         2.897753
+b_Encounter_High_Class3                           4.952466
+b_Existence_Medium_Class3                         4.250550
+b_Existence_High_Class3                           4.442810
+b_Bequest_Medium_Class3                           4.597642
+b_Bequest_High_Class3                             4.767121
+Int_Encounter_Medium_Bee_Class3                   3.320522
+Int_Encounter_High_Bee_Class3                     4.985803
+Int_Existence_Medium_Bee_Class3                   5.140191
+Int_Existence_High_Bee_Class3                     3.710733
+Int_Bequest_Medium_Bee_Class3                     6.937312
+Int_Bequest_High_Bee_Class3                       4.665980
+Int_Existence_Medium_Wasp_Class3                  5.782825
+Int_Existence_High_Wasp_Class3                    4.022989
+Int_Encounter_Medium_Wasp_Class3                 18.223703
+Int_Encounter_High_Wasp_Class3                   11.777625
+Int_Bequest_Medium_Wasp_Class3                   12.269501
+Int_Bequest_High_Wasp_Class3                     11.314470
+delta_Class1                                      0.612821
+delta_Class2                                      0.672986
+ClassAllocation_C1_Q1Age                          0.004756
+ClassAllocation_C1_Income                         0.079365
+ClassAllocation_C1_Female_dummy                   0.157591
+ClassAllocation_C1_Q3Country_England              0.250495
+ClassAllocation_C1_CE_Debrief_Certain_scaled      0.096723
+ClassAllocation_C1_CE_Debrief_Confident_scaled    0.097616
+ClassAllocation_C1_Q43_Citizen                    0.358048
+ClassAllocation_C1_AlwaysZero                     0.380098
+ClassAllocation_C2_Q1Age                          0.004760
+ClassAllocation_C2_Income                         0.082345
+ClassAllocation_C2_Female_dummy                   0.158945
+ClassAllocation_C2_Q3Country_England              0.229025
+ClassAllocation_C2_CE_Debrief_Certain_scaled      0.095448
+ClassAllocation_C2_CE_Debrief_Confident_scaled    0.094032
+ClassAllocation_C2_Q43_Citizen                    0.422678
+ClassAllocation_C2_AlwaysZero                     0.408770
+                                                 t.rat.(0)
+asc_C_Class1                                      -5.56391
+asc_C_Class2                                       0.40260
+asc_C_Class3                                     -11.60975
+beta_Tax_Class1                                   -8.75849
+beta_Tax_Class2                                  -10.49968
+beta_Tax_Class3                                  -10.69071
+b_Encounter_Medium_Class1                          5.59002
+b_Encounter_High_Class1                            5.60329
+b_Existence_Medium_Class1                          3.58294
+b_Existence_High_Class1                            4.15228
+b_Bequest_Medium_Class1                            3.39530
+b_Bequest_High_Class1                              6.22467
+Int_Encounter_Medium_Bee_Class1                   -1.55213
+Int_Encounter_High_Bee_Class1                      2.53391
+Int_Existence_Medium_Bee_Class1                   -3.73605
+Int_Existence_High_Bee_Class1                      2.99710
+Int_Bequest_Medium_Bee_Class1                      1.21589
+Int_Bequest_High_Bee_Class1                        1.10020
+Int_Existence_Medium_Wasp_Class1                   0.71707
+Int_Existence_High_Wasp_Class1                     0.96328
+Int_Encounter_Medium_Wasp_Class1                   1.11332
+Int_Encounter_High_Wasp_Class1                     0.92799
+Int_Bequest_Medium_Wasp_Class1                    -1.97877
+Int_Bequest_High_Wasp_Class1                      -2.61541
+b_Encounter_Medium_Class2                         -2.57551
+b_Encounter_High_Class2                           -3.88903
+b_Existence_Medium_Class2                         -2.49208
+b_Existence_High_Class2                           -4.78833
+b_Bequest_Medium_Class2                            3.82101
+b_Bequest_High_Class2                             -0.59969
+Int_Encounter_Medium_Bee_Class2                   -0.23719
+Int_Encounter_High_Bee_Class2                      5.57199
+Int_Existence_Medium_Bee_Class2                    3.73750
+Int_Existence_High_Bee_Class2                      4.87996
+Int_Bequest_Medium_Bee_Class2                     -3.28000
+Int_Bequest_High_Bee_Class2                        1.17462
+Int_Existence_Medium_Wasp_Class2                   2.21328
+Int_Existence_High_Wasp_Class2                    -0.59806
+Int_Encounter_Medium_Wasp_Class2                   0.78696
+Int_Encounter_High_Wasp_Class2                    -2.26610
+Int_Bequest_Medium_Wasp_Class2                    -1.70260
+Int_Bequest_High_Wasp_Class2                      -0.21048
+b_Encounter_Medium_Class3                         -0.09135
+b_Encounter_High_Class3                           -0.34870
+b_Existence_Medium_Class3                          2.14879
+b_Existence_High_Class3                           -1.15102
+b_Bequest_Medium_Class3                           -3.53183
+b_Bequest_High_Class3                             -0.71717
+Int_Encounter_Medium_Bee_Class3                   -2.22802
+Int_Encounter_High_Bee_Class3                     -0.73612
+Int_Existence_Medium_Bee_Class3                   -0.97917
+Int_Existence_High_Bee_Class3                     -1.01921
+Int_Bequest_Medium_Bee_Class3                      2.41260
+Int_Bequest_High_Bee_Class3                       -1.17551
+Int_Existence_Medium_Wasp_Class3                  -4.24623
+Int_Existence_High_Wasp_Class3                    -3.35375
+Int_Encounter_Medium_Wasp_Class3                   3.50654
+Int_Encounter_High_Wasp_Class3                     2.52845
+Int_Bequest_Medium_Wasp_Class3                    -2.97620
+Int_Bequest_High_Wasp_Class3                      -3.86236
+delta_Class1                                       7.56483
+delta_Class2                                       2.88777
+ClassAllocation_C1_Q1Age                          -4.84155
+ClassAllocation_C1_Income                          2.01211
+ClassAllocation_C1_Female_dummy                   -2.50145
+ClassAllocation_C1_Q3Country_England               0.58256
+ClassAllocation_C1_CE_Debrief_Certain_scaled      -1.32819
+ClassAllocation_C1_CE_Debrief_Confident_scaled     1.86238
+ClassAllocation_C1_Q43_Citizen                    -4.84573
+ClassAllocation_C1_AlwaysZero                     -4.36736
+ClassAllocation_C2_Q1Age                          -1.29127
+ClassAllocation_C2_Income                         -0.13385
+ClassAllocation_C2_Female_dummy                    2.03416
+ClassAllocation_C2_Q3Country_England              -1.46296
+ClassAllocation_C2_CE_Debrief_Certain_scaled      -0.12741
+ClassAllocation_C2_CE_Debrief_Confident_scaled    -1.82984
+ClassAllocation_C2_Q43_Citizen                    -0.94435
+ClassAllocation_C2_AlwaysZero                     -2.81316
+                                                p(2-sided)
+asc_C_Class1                                     2.638e-08
+asc_C_Class2                                      0.687242
+asc_C_Class3                                      0.000000
+beta_Tax_Class1                                   0.000000
+beta_Tax_Class2                                   0.000000
+beta_Tax_Class3                                   0.000000
+b_Encounter_Medium_Class1                        2.270e-08
+b_Encounter_High_Class1                          2.103e-08
+b_Existence_Medium_Class1                       3.3976e-04
+b_Existence_High_Class1                          3.292e-05
+b_Bequest_Medium_Class1                         6.8554e-04
+b_Bequest_High_Class1                            4.826e-10
+Int_Encounter_Medium_Bee_Class1                   0.120630
+Int_Encounter_High_Bee_Class1                     0.011280
+Int_Existence_Medium_Bee_Class1                 1.8693e-04
+Int_Existence_High_Bee_Class1                     0.002726
+Int_Bequest_Medium_Bee_Class1                     0.224028
+Int_Bequest_High_Bee_Class1                       0.271245
+Int_Existence_Medium_Wasp_Class1                  0.473330
+Int_Existence_High_Wasp_Class1                    0.335409
+Int_Encounter_Medium_Wasp_Class1                  0.265572
+Int_Encounter_High_Wasp_Class1                    0.353413
+Int_Bequest_Medium_Wasp_Class1                    0.047841
+Int_Bequest_High_Wasp_Class1                      0.008912
+b_Encounter_Medium_Class2                         0.010009
+b_Encounter_High_Class2                         1.0065e-04
+b_Existence_Medium_Class2                         0.012700
+b_Existence_High_Class2                          1.682e-06
+b_Bequest_Medium_Class2                         1.3290e-04
+b_Bequest_High_Class2                             0.548716
+Int_Encounter_Medium_Bee_Class2                   0.812513
+Int_Encounter_High_Bee_Class2                    2.519e-08
+Int_Existence_Medium_Bee_Class2                 1.8586e-04
+Int_Existence_High_Bee_Class2                    1.061e-06
+Int_Bequest_Medium_Bee_Class2                     0.001038
+Int_Bequest_High_Bee_Class2                       0.240149
+Int_Existence_Medium_Wasp_Class2                  0.026878
+Int_Existence_High_Wasp_Class2                    0.549800
+Int_Encounter_Medium_Wasp_Class2                  0.431307
+Int_Encounter_High_Wasp_Class2                    0.023445
+Int_Bequest_Medium_Wasp_Class2                    0.088643
+Int_Bequest_High_Wasp_Class2                      0.833294
+b_Encounter_Medium_Class3                         0.927214
+b_Encounter_High_Class3                           0.727317
+b_Existence_Medium_Class3                         0.031651
+b_Existence_High_Class3                           0.249723
+b_Bequest_Medium_Class3                         4.1270e-04
+b_Bequest_High_Class3                             0.473268
+Int_Encounter_Medium_Bee_Class3                   0.025879
+Int_Encounter_High_Bee_Class3                     0.461657
+Int_Existence_Medium_Bee_Class3                   0.327495
+Int_Existence_High_Bee_Class3                     0.308101
+Int_Bequest_Medium_Bee_Class3                     0.015839
+Int_Bequest_High_Bee_Class3                       0.239791
+Int_Existence_Medium_Wasp_Class3                 2.174e-05
+Int_Existence_High_Wasp_Class3                  7.9725e-04
+Int_Encounter_Medium_Wasp_Class3                4.5398e-04
+Int_Encounter_High_Wasp_Class3                    0.011457
+Int_Bequest_Medium_Wasp_Class3                    0.002918
+Int_Bequest_High_Wasp_Class3                    1.1230e-04
+delta_Class1                                     3.886e-14
+delta_Class2                                      0.003880
+ClassAllocation_C1_Q1Age                         1.288e-06
+ClassAllocation_C1_Income                         0.044209
+ClassAllocation_C1_Female_dummy                   0.012369
+ClassAllocation_C1_Q3Country_England              0.560187
+ClassAllocation_C1_CE_Debrief_Certain_scaled      0.184116
+ClassAllocation_C1_CE_Debrief_Confident_scaled    0.062549
+ClassAllocation_C1_Q43_Citizen                   1.261e-06
+ClassAllocation_C1_AlwaysZero                    1.258e-05
+ClassAllocation_C2_Q1Age                          0.196609
+ClassAllocation_C2_Income                         0.893524
+ClassAllocation_C2_Female_dummy                   0.041936
+ClassAllocation_C2_Q3Country_England              0.143480
+ClassAllocation_C2_CE_Debrief_Certain_scaled      0.898618
+ClassAllocation_C2_CE_Debrief_Confident_scaled    0.067274
+ClassAllocation_C2_Q43_Citizen                    0.344991
+ClassAllocation_C2_AlwaysZero                     0.004906
+                                                  Rob.s.e.
+asc_C_Class1                                      0.263670
+asc_C_Class2                                      0.255783
+asc_C_Class3                                      0.532524
+beta_Tax_Class1                                   0.004392
+beta_Tax_Class2                                   0.010820
+beta_Tax_Class3                                   0.019206
+b_Encounter_Medium_Class1                         4.266869
+b_Encounter_High_Class1                           4.633107
+b_Existence_Medium_Class1                         4.231518
+b_Existence_High_Class1                           5.022031
+b_Bequest_Medium_Class1                           7.599758
+b_Bequest_High_Class1                             9.529116
+Int_Encounter_Medium_Bee_Class1                   4.777425
+Int_Encounter_High_Bee_Class1                     7.089700
+Int_Existence_Medium_Bee_Class1                   6.456993
+Int_Existence_High_Bee_Class1                     6.813328
+Int_Bequest_Medium_Bee_Class1                     6.718188
+Int_Bequest_High_Bee_Class1                       6.206527
+Int_Existence_Medium_Wasp_Class1                  5.989069
+Int_Existence_High_Wasp_Class1                    7.931864
+Int_Encounter_Medium_Wasp_Class1                  7.292097
+Int_Encounter_High_Wasp_Class1                    6.919869
+Int_Bequest_Medium_Wasp_Class1                    6.581626
+Int_Bequest_High_Wasp_Class1                      6.953338
+b_Encounter_Medium_Class2                         3.551846
+b_Encounter_High_Class2                           4.097944
+b_Existence_Medium_Class2                         3.727513
+b_Existence_High_Class2                           4.226311
+b_Bequest_Medium_Class2                           4.642705
+b_Bequest_High_Class2                             3.697609
+Int_Encounter_Medium_Bee_Class2                   4.366492
+Int_Encounter_High_Bee_Class2                     4.840129
+Int_Existence_Medium_Bee_Class2                   5.474408
+Int_Existence_High_Bee_Class2                     5.960423
+Int_Bequest_Medium_Bee_Class2                     5.171089
+Int_Bequest_High_Bee_Class2                       4.203297
+Int_Existence_Medium_Wasp_Class2                  3.883535
+Int_Existence_High_Wasp_Class2                    5.332140
+Int_Encounter_Medium_Wasp_Class2                  4.572327
+Int_Encounter_High_Wasp_Class2                    5.728025
+Int_Bequest_Medium_Wasp_Class2                    3.929097
+Int_Bequest_High_Wasp_Class2                      4.457458
+b_Encounter_Medium_Class3                         3.092988
+b_Encounter_High_Class3                          10.382628
+b_Existence_Medium_Class3                         7.224492
+b_Existence_High_Class3                           9.464519
+b_Bequest_Medium_Class3                           8.441410
+b_Bequest_High_Class3                            11.420554
+Int_Encounter_Medium_Bee_Class3                   3.504095
+Int_Encounter_High_Bee_Class3                     8.460918
+Int_Existence_Medium_Bee_Class3                   7.964205
+Int_Existence_High_Bee_Class3                     5.783943
+Int_Bequest_Medium_Bee_Class3                    15.839689
+Int_Bequest_High_Bee_Class3                       8.876503
+Int_Existence_Medium_Wasp_Class3                  9.068580
+Int_Existence_High_Wasp_Class3                    7.397886
+Int_Encounter_Medium_Wasp_Class3                 28.078751
+Int_Encounter_High_Wasp_Class3                   23.195822
+Int_Bequest_Medium_Wasp_Class3                   22.799328
+Int_Bequest_High_Wasp_Class3                     14.538908
+delta_Class1                                      0.850139
+delta_Class2                                      1.089900
+ClassAllocation_C1_Q1Age                          0.005261
+ClassAllocation_C1_Income                         0.078495
+ClassAllocation_C1_Female_dummy                   0.162673
+ClassAllocation_C1_Q3Country_England              0.264059
+ClassAllocation_C1_CE_Debrief_Certain_scaled      0.102290
+ClassAllocation_C1_CE_Debrief_Confident_scaled    0.114527
+ClassAllocation_C1_Q43_Citizen                    0.420165
+ClassAllocation_C1_AlwaysZero                     0.411664
+ClassAllocation_C2_Q1Age                          0.005274
+ClassAllocation_C2_Income                         0.082657
+ClassAllocation_C2_Female_dummy                   0.164723
+ClassAllocation_C2_Q3Country_England              0.239364
+ClassAllocation_C2_CE_Debrief_Certain_scaled      0.103132
+ClassAllocation_C2_CE_Debrief_Confident_scaled    0.120750
+ClassAllocation_C2_Q43_Citizen                    0.537264
+ClassAllocation_C2_AlwaysZero                     0.498440
+                                               Rob.t.rat.(0)
+asc_C_Class1                                        -2.40441
+asc_C_Class2                                         0.25987
+asc_C_Class3                                        -6.18639
+beta_Tax_Class1                                     -6.34180
+beta_Tax_Class2                                     -5.89713
+beta_Tax_Class3                                     -5.21542
+b_Encounter_Medium_Class1                            4.22002
+b_Encounter_High_Class1                              4.76312
+b_Existence_Medium_Class1                            3.10706
+b_Existence_High_Class1                              3.56078
+b_Bequest_Medium_Class1                              2.13978
+b_Bequest_High_Class1                                4.29834
+Int_Encounter_Medium_Bee_Class1                     -1.66913
+Int_Encounter_High_Bee_Class1                        1.82172
+Int_Existence_Medium_Bee_Class1                     -3.10528
+Int_Existence_High_Bee_Class1                        2.71722
+Int_Bequest_Medium_Bee_Class1                        1.33288
+Int_Bequest_High_Bee_Class1                          1.13909
+Int_Existence_Medium_Wasp_Class1                     0.57838
+Int_Existence_High_Wasp_Class1                       0.70734
+Int_Encounter_Medium_Wasp_Class1                     1.09939
+Int_Encounter_High_Wasp_Class1                       0.93234
+Int_Bequest_Medium_Wasp_Class1                      -2.07932
+Int_Bequest_High_Wasp_Class1                        -2.67103
+b_Encounter_Medium_Class2                           -2.51201
+b_Encounter_High_Class2                             -3.88800
+b_Existence_Medium_Class2                           -2.43343
+b_Existence_High_Class2                             -4.60776
+b_Bequest_Medium_Class2                              3.07438
+b_Bequest_High_Class2                               -0.48772
+Int_Encounter_Medium_Bee_Class2                     -0.23068
+Int_Encounter_High_Bee_Class2                        4.44401
+Int_Existence_Medium_Bee_Class2                      3.39474
+Int_Existence_High_Bee_Class2                        3.13404
+Int_Bequest_Medium_Bee_Class2                       -3.20101
+Int_Bequest_High_Bee_Class2                          0.99051
+Int_Existence_Medium_Wasp_Class2                     2.27620
+Int_Existence_High_Wasp_Class2                      -0.50047
+Int_Encounter_Medium_Wasp_Class2                     0.62505
+Int_Encounter_High_Wasp_Class2                      -1.79789
+Int_Bequest_Medium_Wasp_Class2                      -1.76138
+Int_Bequest_High_Wasp_Class2                        -0.18777
+b_Encounter_Medium_Class3                           -0.08558
+b_Encounter_High_Class3                             -0.16633
+b_Existence_Medium_Class3                            1.26424
+b_Existence_High_Class3                             -0.54031
+b_Bequest_Medium_Class3                             -1.92362
+b_Bequest_High_Class3                               -0.29936
+Int_Encounter_Medium_Bee_Class3                     -2.11130
+Int_Encounter_High_Bee_Class3                       -0.43378
+Int_Existence_Medium_Bee_Class3                     -0.63197
+Int_Existence_High_Bee_Class3                       -0.65388
+Int_Bequest_Medium_Bee_Class3                        1.05665
+Int_Bequest_High_Bee_Class3                         -0.61791
+Int_Existence_Medium_Wasp_Class3                    -2.70772
+Int_Existence_High_Wasp_Class3                      -1.82378
+Int_Encounter_Medium_Wasp_Class3                     2.27582
+Int_Encounter_High_Wasp_Class3                       1.28381
+Int_Bequest_Medium_Wasp_Class3                      -1.60165
+Int_Bequest_High_Wasp_Class3                        -3.00577
+delta_Class1                                         5.45309
+delta_Class2                                         1.78312
+ClassAllocation_C1_Q1Age                            -4.37701
+ClassAllocation_C1_Income                            2.03440
+ClassAllocation_C1_Female_dummy                     -2.42330
+ClassAllocation_C1_Q3Country_England                 0.55264
+ClassAllocation_C1_CE_Debrief_Certain_scaled        -1.25589
+ClassAllocation_C1_CE_Debrief_Confident_scaled       1.58739
+ClassAllocation_C1_Q43_Citizen                      -4.12935
+ClassAllocation_C1_AlwaysZero                       -4.03248
+ClassAllocation_C2_Q1Age                            -1.16528
+ClassAllocation_C2_Income                           -0.13334
+ClassAllocation_C2_Female_dummy                      1.96281
+ClassAllocation_C2_Q3Country_England                -1.39976
+ClassAllocation_C2_CE_Debrief_Certain_scaled        -0.11792
+ClassAllocation_C2_CE_Debrief_Confident_scaled      -1.42495
+ClassAllocation_C2_Q43_Citizen                      -0.74294
+ClassAllocation_C2_AlwaysZero                       -2.30707
+                                                p(2-sided)
+asc_C_Class1                                      0.016199
+asc_C_Class2                                      0.794961
+asc_C_Class3                                     6.156e-10
+beta_Tax_Class1                                  2.271e-10
+beta_Tax_Class2                                  3.699e-09
+beta_Tax_Class3                                  1.834e-07
+b_Encounter_Medium_Class1                        2.443e-05
+b_Encounter_High_Class1                          1.906e-06
+b_Existence_Medium_Class1                         0.001890
+b_Existence_High_Class1                         3.6976e-04
+b_Bequest_Medium_Class1                           0.032372
+b_Bequest_High_Class1                            1.721e-05
+Int_Encounter_Medium_Bee_Class1                   0.095092
+Int_Encounter_High_Bee_Class1                     0.068497
+Int_Existence_Medium_Bee_Class1                   0.001901
+Int_Existence_High_Bee_Class1                     0.006583
+Int_Bequest_Medium_Bee_Class1                     0.182571
+Int_Bequest_High_Bee_Class1                       0.254667
+Int_Existence_Medium_Wasp_Class1                  0.563006
+Int_Existence_High_Wasp_Class1                    0.479355
+Int_Encounter_Medium_Wasp_Class1                  0.271596
+Int_Encounter_High_Wasp_Class1                    0.351161
+Int_Bequest_Medium_Wasp_Class1                    0.037588
+Int_Bequest_High_Wasp_Class1                      0.007562
+b_Encounter_Medium_Class2                         0.012005
+b_Encounter_High_Class2                         1.0107e-04
+b_Existence_Medium_Class2                         0.014957
+b_Existence_High_Class2                          4.070e-06
+b_Bequest_Medium_Class2                           0.002109
+b_Bequest_High_Class2                             0.625751
+Int_Encounter_Medium_Bee_Class2                   0.817560
+Int_Encounter_High_Bee_Class2                    8.830e-06
+Int_Existence_Medium_Bee_Class2                 6.8693e-04
+Int_Existence_High_Bee_Class2                     0.001724
+Int_Bequest_Medium_Bee_Class2                     0.001369
+Int_Bequest_High_Bee_Class2                       0.321926
+Int_Existence_Medium_Wasp_Class2                  0.022834
+Int_Existence_High_Wasp_Class2                    0.616741
+Int_Encounter_Medium_Wasp_Class2                  0.531939
+Int_Encounter_High_Wasp_Class2                    0.072195
+Int_Bequest_Medium_Wasp_Class2                    0.078174
+Int_Bequest_High_Wasp_Class2                      0.851059
+b_Encounter_Medium_Class3                         0.931797
+b_Encounter_High_Class3                           0.867900
+b_Existence_Medium_Class3                         0.206142
+b_Existence_High_Class3                           0.588983
+b_Bequest_Medium_Class3                           0.054402
+b_Bequest_High_Class3                             0.764666
+Int_Encounter_Medium_Bee_Class3                   0.034747
+Int_Encounter_High_Bee_Class3                     0.664450
+Int_Existence_Medium_Bee_Class3                   0.527407
+Int_Existence_High_Bee_Class3                     0.513186
+Int_Bequest_Medium_Bee_Class3                     0.290672
+Int_Bequest_High_Bee_Class3                       0.536633
+Int_Existence_Medium_Wasp_Class3                  0.006775
+Int_Existence_High_Wasp_Class3                    0.068186
+Int_Encounter_Medium_Wasp_Class3                  0.022857
+Int_Encounter_High_Wasp_Class3                    0.199208
+Int_Bequest_Medium_Wasp_Class3                    0.109233
+Int_Bequest_High_Wasp_Class3                      0.002649
+delta_Class1                                     4.950e-08
+delta_Class2                                      0.074566
+ClassAllocation_C1_Q1Age                         1.203e-05
+ClassAllocation_C1_Income                         0.041912
+ClassAllocation_C1_Female_dummy                   0.015380
+ClassAllocation_C1_Q3Country_England              0.580510
+ClassAllocation_C1_CE_Debrief_Certain_scaled      0.209155
+ClassAllocation_C1_CE_Debrief_Confident_scaled    0.112425
+ClassAllocation_C1_Q43_Citizen                   3.638e-05
+ClassAllocation_C1_AlwaysZero                    5.519e-05
+ClassAllocation_C2_Q1Age                          0.243905
+ClassAllocation_C2_Income                         0.893923
+ClassAllocation_C2_Female_dummy                   0.049668
+ClassAllocation_C2_Q3Country_England              0.161585
+ClassAllocation_C2_CE_Debrief_Certain_scaled      0.906135
+ClassAllocation_C2_CE_Debrief_Confident_scaled    0.154172
+ClassAllocation_C2_Q43_Citizen                    0.457516
+ClassAllocation_C2_AlwaysZero                     0.021051
+
+
+Summary of class allocation for model component :
+        Mean prob.
+Class1      0.4417
+Class2      0.2911
+Class3      0.2672
+
+
+          used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells 3151289 168.3    5021414 268.2  5021414 268.2
+Vcells 6677765  51.0   17824054 136.0 17824040 136.0
