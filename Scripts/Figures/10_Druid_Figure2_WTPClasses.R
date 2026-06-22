@@ -14,23 +14,14 @@
 #### Replication Information:
 
 # here() = "C:/Users/earpkin/OneDrive - University of Leeds/DRUID/D2/Analysis/D2Backup"
-# R version 4.5.0 (2025-04-11 ucrt)
-# Platform: x86_64-w64-mingw32/x64 (64-bit)
-# Running under: Windows 10 x64 (build 19044)
-# Matrix products: default
-#   [1] LC_COLLATE=English_United Kingdom.utf8  LC_CTYPE=English_United Kingdom.utf8   
-# [3] LC_MONETARY=English_United Kingdom.utf8 LC_NUMERIC=C                           
-# [5] LC_TIME=English_United Kingdom.utf8    
-#   [1] matrixStats_0.62.0 Rfast_2.0.6        RcppZiggurat_0.1.6 Rcpp_1.0.8.3       data.table_1.14.2 
-# [6] mded_0.1-2         magrittr_2.0.3     forcats_0.5.1      stringr_1.4.0      dplyr_1.0.9       
-# [11] purrr_0.3.4        readr_2.1.2        tidyr_1.2.0        tibble_3.1.7       ggplot2_3.3.6     
-# [16] tidyverse_1.3.1    apollo_0.2.7       here_1.0.1        
+# version  R version 4.5.0 (2025-04-11 ucrt)
+# os       Windows 11 x64 (build 22631)
+# See 00_D2_Replicator.R for full package list
 
 
 # **********************************************************************************
 #### Libraries:
 options(scipen=90)
-library(apollo)
 library(tidyverse)
 library(dplyr)
 library(magrittr)

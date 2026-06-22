@@ -17,23 +17,7 @@
 # R version 4.5.0 (2025-04-11 ucrt)
 # Platform: x86_64-w64-mingw32/x64 (64-bit)
 # Running under: Windows 11 x64 (build 22631)
-#
-# Matrix products: default
-#
-# locale:
-#   [1] LC_COLLATE=English_United Kingdom.utf8  LC_CTYPE=English_United Kingdom.utf8    LC_MONETARY=English_United Kingdom.utf8
-# [4] LC_NUMERIC=C                            LC_TIME=English_United Kingdom.utf8
-#
-# attached base packages:
-#   [1] parallel  stats     graphics  grDevices utils     datasets  methods   base
-#
-# other attached packages:
-#   [1] foreach_1.5.2        xtable_1.8-4         spatialreg_1.2-6     Matrix_1.5-3         spdep_1.2-7          spData_2.2.1
-# [7] sp_1.6-0             sf_1.0-9             spacetime_1.2-8      microbenchmark_1.4.9 forcats_0.5.2        purrr_1.0.1
-# [13] readr_2.1.3          tidyr_1.2.1          tibble_3.1.8         tidyverse_1.3.2      ggdist_3.2.1         matrixStats_0.63.0
-# [19] Rfast_2.0.6          RcppZiggurat_0.1.6   Rcpp_1.0.9           lubridate_1.9.0      timechange_0.2.0     PostcodesioR_0.3.1
-# [25] stringi_1.7.12       stringr_1.5.0        data.table_1.14.6    mded_0.1-2           reshape2_1.4.4       ggridges_0.5.4
-# [31] ggplot2_3.4.0        magrittr_2.0.3       dplyr_1.0.10         apollo_0.2.8         here_1.0.1
+# See 00_D2_Replicator.R for full package list
 #
 # loaded via a namespace (and not attached):
 #   [1] googledrive_2.0.0    colorspace_2.0-3     deldir_1.0-6         class_7.3-20         ellipsis_0.3.2       rprojroot_2.0.3

@@ -15,21 +15,18 @@
 # **********************************************************************************
 
 
-## Packages to install
-# install.packages("haven")
-
-## Any dcchoice problems run this first to rule out:
-# BiocManager::install("Icens")
-
+## Replication Information:
+# here() = "C:/Users/earpkin/OneDrive - University of Leeds/DRUID/D2/Analysis/D2Backup"
+# version  R version 4.5.0 (2025-04-11 ucrt)
+# os       Windows 11 x64 (build 22631)
+# See 00_D2_Replicator.R for full package list
 
 ## Packages to library
-library(haven)
 library(here)
 library(magrittr)
 library(data.table)
 library(tidyverse)
 library(readxl)
-library(DCchoice)
 library(janitor)
 
 

@@ -113,7 +113,6 @@ options(scipen = 90) ## forces R to display numbers with decimals not as scienti
 
 
 ## Libraries that will come in handy later
-library(apollo)
 library(dplyr)
 library(magrittr)
 library(ggplot2)

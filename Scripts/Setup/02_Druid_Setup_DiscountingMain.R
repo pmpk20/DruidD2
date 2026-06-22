@@ -14,29 +14,9 @@
 # **********************************************************************************
 #### Replication Information:
 
-# R version 4.4.1 (2024-06-14 ucrt)
-# Platform: x86_64-w64-mingw32/x64
-# Running under: Windows 11 x64 (build 22631)
-# Matrix products: default
-# locale:
-#   [1] LC_COLLATE=English_United Kingdom.utf8 
-# [2] LC_CTYPE=English_United Kingdom.utf8   
-# [3] LC_MONETARY=English_United Kingdom.utf8
-# [4] LC_NUMERIC=C                           
-# [5] LC_TIME=English_United Kingdom.utf8    
-# time zone: Europe/London
-# tzcode source: internal
-# attached base packages:
-#   [1] stats     graphics  grDevices utils     datasets  methods   base     
-# other attached packages:
-#   [1] RColorBrewer_1.1-3 ggdist_3.3.2       ggridges_0.5.6    
-# [4] matrixStats_1.3.0  Rfast_2.1.0        RcppParallel_5.1.7
-# [7] RcppZiggurat_0.1.6 Rcpp_1.0.12        data.table_1.15.4 
-# [10] here_1.0.1         mded_0.1-2         apollo_0.3.3      
-# [13] magrittr_2.0.3     lubridate_1.9.3    forcats_1.0.0     
-# [16] stringr_1.5.1      dplyr_1.1.4        purrr_1.0.2       
-# [19] readr_2.1.5        tidyr_1.3.1        tibble_3.2.1      
-# [22] ggplot2_3.5.1      tidyverse_2.0.0   
+# version  R version 4.5.0 (2025-04-11 ucrt)
+# os       Windows 11 x64 (build 22631)
+# See 00_D2_Replicator.R for full package list
 # loaded via a namespace (and not attached):
 #   [1] gtable_0.3.5         lattice_0.22-6       tzdb_0.4.0          
 # [4] numDeriv_2016.8-1.1  vctrs_0.6.5          tools_4.4.1         

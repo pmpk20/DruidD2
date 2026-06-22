@@ -13,16 +13,16 @@
 
 
 ## Libraries that will come in handy later
-library(apollo)
+## Replication Information:
+# here() = "C:/Users/earpkin/OneDrive - University of Leeds/DRUID/D2/Analysis/D2Backup"
+# version  R version 4.5.0 (2025-04-11 ucrt)
+# os       Windows 11 x64 (build 22631)
+# See 00_D2_Replicator.R for full package list
+
 library(dplyr)
 library(magrittr)
-library(ggplot2)
-library(ggridges)
-library(reshape2)
-library(mded)
 library(here)
 library(data.table)
-library(MASS)
 library(psych)
 library(GPArotation)
 

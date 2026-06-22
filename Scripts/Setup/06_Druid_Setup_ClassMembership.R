@@ -11,6 +11,12 @@
 #### Stage Zero: Replication and libraries ####
 ## ****************************************************************************
 
+## Replication Information:
+# here() = "C:/Users/earpkin/OneDrive - University of Leeds/DRUID/D2/Analysis/D2Backup"
+# version  R version 4.5.0 (2025-04-11 ucrt)
+# os       Windows 11 x64 (build 22631)
+# See 00_D2_Replicator.R for full package list
+
 library(data.table)
 library(magrittr)
 library(dplyr)

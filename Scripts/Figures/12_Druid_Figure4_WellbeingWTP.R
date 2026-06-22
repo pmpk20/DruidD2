@@ -111,7 +111,6 @@ library(data.table)
 library(stats)
 library(coin)
 library(mvtnorm)
-library(apollo)
 # library(cmdlr)
 
 

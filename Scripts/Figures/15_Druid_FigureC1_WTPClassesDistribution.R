@@ -30,7 +30,6 @@
 # **********************************************************************************
 #### Libraries:
 options(scipen=90)
-library(apollo)
 library(tidyverse)
 library(dplyr)
 library(magrittr)
