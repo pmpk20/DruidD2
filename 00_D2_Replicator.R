@@ -144,9 +144,11 @@ here("Scripts/Setup/05_Druid_Setup_SlidersFactorAnalysis.R") %>% source()
 #### Section 3: Estimation ####
 ## **********************************************************************************
 
-
-here("Scripts/CEModelling/07_Druid_Model_TruncatedLC3C.R") %>% source()      # → Table C2 (estimates.csv)
-here("Scripts/CEModelling/08_Druid_Model_SimulatedMeanWTP.R") %>% source()   # → Table C1 (SimulatedMeans_Wide.csv)
+# Pre-computed outputs for scripts 07 and 08 are committed to CEOutput/Main/LCM/.
+# Re-estimation requires HPC resources (multi-core, several hours).
+# Uncomment these lines only if you wish to re-estimate from scratch.
+# here("Scripts/CEModelling/07_Druid_Model_TruncatedLC3C.R") %>% source()      # → CEOutput V3 model objects
+# here("Scripts/CEModelling/08_Druid_Model_SimulatedMeanWTP.R") %>% source()   # → SimulatedMeans_Wide.csv
 
 
 here("Scripts/Setup/06_Druid_Setup_ClassMembership.R") %>% source()
