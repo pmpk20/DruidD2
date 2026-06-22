@@ -1,20 +1,42 @@
-Author: Dr Peter King ([p.king1\@leeds.ac.uk](mailto:p.king1@leeds.ac.uk){.email})
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20799844.svg)](https://doi.org/10.5281/zenodo.20799844)
 
-Last Change: 21/06/2026
+## Heterogeneous Preferences for Use and Non-use Values Provided by Insects: supporting dataset
 
-## DRUID Insect survey
+### Here you will find the survey design, experimental design, R code, raw responses, and model outputs sufficient to fully replicate this paper
 
-### Here you will find the survey design, experimental design, R code, raw responses, and model outputs.
 
-### PLEASE NOTE: Data are publicly available in this repository and will be assigned a permanent DOI via Zenodo.
+#### Authors:
+-   Author: Dr Peter King (University of Leeds: [p.king1\@leeds.ac.uk](mailto:p.king1@leeds.ac.uk))
+-   Co-authors: Dr. Tom Breeze (Reading), Dr. Theresa Robinson (JNCC), Prof. Martin Dallimer (Imperial).
+
+
+#### Keywords:
+-   Keywords: Bequest, Choice modelling, cultural ecosystem services, encountering, existence, insects, non-use values.
+
+   
+#### Acknowledgements:
+-   Funding: This work was supported by the Natural Environment Research Council Grant/Award Number: NE/V006916/1 This work is part of task D1 of work package D for the DRUID project: https://environment.leeds.ac.uk/geography-research-river-basin-processes-management/dir-record/research-projects/1656/drivers-and-repercussions-of-uk-insect-declines-druid
+-   This work was partly undertaken on the Aire HPC system at the University of Leeds, UK and using specialist and High-Performance computing systems provided by Information Services at the University of Kent. 
+-   Data provided by [SurveyEngine](https://surveyengine.com/).
+-   Using RStudio and [Apollo](https://apollochoicemodelling.com/) (Hess and Palma, 2019).
+-   Ethical approval for data collection was granted by the School of Earth and Environment Ethics Committee, University of Leeds (Ref: BESS+ FREC 2023-0769-1031).
+
 
 #### Description:
-
 -   `/Data/Main/` contains anonymised survey data for N = 1,684 online UK respondents from October 2024. Raw SurveyEngine export files (covariates xlsx, timestamps xlsx) are withheld; the anonymised input to the pipeline is `Data_Covariates_Step0.csv`. See the commented block at the top of `01_Druid_Setup_CleaningMain.R` for details of what was withheld and why.
 -   `/Survey/` has the full survey reproduced and explained alongside pictures used therein, and the codebook explaining each variable and coding.
 -   `/Biowell4/` is a backup for the Shiny app [here](https://pmpk20.shinyapps.io/biowell4/) demonstrating wellbeing scores from insects.
 -   Run `00_D2_Replicator.R` to execute all replication scripts in order. Scripts are numbered 01--19 by execution sequence.
--   Data are publicly available in this repository. A Zenodo DOI will be linked here upon deposit.
+-   Data are publicly available in this repository. Zenodo DOI: https://doi.org/10.5281/zenodo.20799845
+-   Last Change: 22/06/2026
+
+  
+  #### Requirements:
+  - R version 4.5.0 or later
+  - Key packages: apollo (0.3.5), data.table (1.17.2), tidyverse (2.0.0),
+    ggplot2 (3.5.2), ggdist (3.3.2), writexl, readxl, here, janitor, psych
+  - See 00_D2_Replicator.R for the full sessionInfo()
+
 
 #### Directory structure (replication files only):
 
@@ -86,11 +108,3 @@ D2Backup/
         ├── TableC2_ModelEstimates.csv                             # [output of 18] Table C2
         └── TableC3_WellbeingLVs.csv                               # [output of 16] Table C3
 ```
-
-#### Acknowledgements:
-
--   Data provided by [SurveyEngine](https://surveyengine.com/).
--   Using RStudio and [Apollo](https://apollochoicemodelling.com/) (Hess and Palma, 2019).
--   This work was funded by the Natural Environment Research Council (NERC) through the [DRUID](https://druidproject.org.uk/) project.
--   Ethical approval for data collection was granted by the School of Earth and Environment Ethics Committee, University of Leeds (Ref: BESS+ FREC 2023-0769-1031).
--   Acknowledgement: Using specialist and High-Performance Computing systems provided by Information Services at the University of Kent, and by the Research Computing Team at the University of Leeds.
