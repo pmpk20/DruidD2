@@ -57,6 +57,8 @@ D2Backup/
 │       └── 15_Druid_FigureC1_WTPClassesDistribution.R            # Figure C1
 ├── Survey/
 │   ├── Figure1_ChoiceCard.png                                         # Figure 1 (static image, not script-generated)
+│   ├── Figure1_FinalCE.html                                           # interactive CE choice card (full survey version)
+│   ├── Figure1_FinalCE.png                                            # static export of the above
 │   ├── CE_Explainer_A1.jpg ... CE_Explainer_Plan.jpg                  # choice experiment explainer slides (7 images)
 │   ├── D2_V2.codeplan.xlsx                                            # SurveyEngine codeplan (question text source for script 19)
 │   └── D2_Codebook.xlsx                                               # [output of 19] data codebook (380 variables)

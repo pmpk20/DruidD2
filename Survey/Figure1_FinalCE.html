@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin: 30px;
+    color: #000;
+  }
+  .instructions {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+  }
+  th, td {
+    border: 1px solid #999;
+    padding: 8px 10px;
+    vertical-align: top;
+  }
+  th {
+    background-color: #4a4a4a;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  .row-label {
+    font-weight: bold;
+    background-color: #f9f9f9;
+    width: 22%;
+  }
+  .plan-col {
+    width: 26%;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .insect-cell {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 8px;
+  }
+  .illustration-placeholder {
+    display: inline-block;
+    background-color: #d0d0d0;
+    border: 1px solid #999;
+    width: 88%;
+    padding: 18px 8px;
+    font-size: 11px;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .insect-label {
+    text-decoration: underline;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 6px;
+  }
+  .choice-cell {
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+  }
+  .radio-circle {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #555;
+    border-radius: 50%;
+  }
+  .caption {
+    margin-top: 14px;
+    font-size: 12px;
+    font-style: italic;
+    color: #333;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<p class="instructions">Please consider each question individually as they are different possible combinations.</p>
+
+<p class="instructions">In similar surveys, it was found that people tend to overestimate how much they are actually willing to pay. When choosing among the following plans, please bear in mind that the tax to fund the management of these insect populations will reduce your available income and you would have less money to spend on other expenses.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="background-color:#f9f9f9; color:#000;"></th>
+      <th>Plan A</th>
+      <th>Plan B</th>
+      <th>Plan C</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td class="row-label">This plan focuses on these insects:</td>
+      <td class="insect-cell">
+        <span class="insect-label">Wasps</span>
+        <div class="illustration-placeholder">
+          [Illustrations of three wasp species]<br>
+          <em>Sourced from Olsen et al. (2001);<br>not reproduced for copyright reasons]</em>
+        </div>
+      </td>
+      <td class="insect-cell">
+        <span class="insect-label">Wasps</span>
+        <div class="illustration-placeholder">
+          [Illustrations of three wasp species]<br>
+          <em>Sourced from Olsen et al. (2001);<br>not reproduced for copyright reasons]</em>
+        </div>
+      </td>
+      <td class="insect-cell">
+        <span class="insect-label">Wasps</span>
+        <div class="illustration-placeholder">
+          [Illustrations of three wasp species]<br>
+          <em>Sourced from Olsen et al. (2001);<br>not reproduced for copyright reasons]</em>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="row-label">Area managed for insects to be encountered by people now.</td>
+      <td class="plan-col">Small increase (+15%)</td>
+      <td class="plan-col">Small increase (+15%)</td>
+      <td class="plan-col">No change (+0%)</td>
+    </tr>
+
+    <tr>
+      <td class="row-label">Area managed for insects to exist now.</td>
+      <td class="plan-col">No Change (+0%)</td>
+      <td class="plan-col">Small Increase (+15%)</td>
+      <td class="plan-col">No change (+0%)</td>
+    </tr>
+
+    <tr>
+      <td class="row-label">Area managed for insects to exist in the future.</td>
+      <td class="plan-col">No Change (+0%)</td>
+      <td class="plan-col">No Change (+0%)</td>
+      <td class="plan-col">No change (+0%)</td>
+    </tr>
+
+    <tr>
+      <td class="row-label">Additional income tax per month for 10 years.</td>
+      <td class="plan-col">£6</td>
+      <td class="plan-col">£12</td>
+      <td class="plan-col">£0</td>
+    </tr>
+
+    <tr>
+      <td class="row-label">Which would you choose?</td>
+      <td class="choice-cell"><span class="radio-circle"></span></td>
+      <td class="choice-cell"><span class="radio-circle"></span></td>
+      <td class="choice-cell"><span class="radio-circle"></span></td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p class="caption">
+  <strong>Figure 1.</strong> A reproduction of the choice experiment as presented to participants, shown here for the wasp taxon. Bees and beetles were presented in an identical format with the same attributes and levels. Insect illustrations shown to respondents were sourced from Olsen, L.H., Sunesen, J. and Pedersen, B.V. (2001), <em>Small Woodland Creatures</em>, Oxford University Press, and are not reproduced here for copyright reasons. The complete survey instrument including illustrations is available from the corresponding author on request, and replication materials are available at https://github.com/pmpk20/D2Backup.
+</p>
+
+</body>
+</html>

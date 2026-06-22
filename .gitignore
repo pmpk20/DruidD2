@@ -63,5 +63,26 @@ Survey/thebees_3_small.png
 Survey/thebeetles_3_small.png
 Survey/thewasps_3_small.png
 
+# OtherOutput/Figures: exploratory/diagnostic figures from non-final model versions.
+# Paper figures (scripts 10-15) and V3 supplementary outputs are committed separately.
+OtherOutput/Figures/D2_HLCM_*
+OtherOutput/Figures/D2_LCMXL_*
+OtherOutput/Figures/D2_Main_*
+OtherOutput/Figures/D2_Truncated_LC_3C_MXL_NoDR_V1_*
+OtherOutput/Figures/D2_Truncated_LC_3C_MXL_NoDR_V4_*
+OtherOutput/Figures/D2_Truncated_HLC_*
+OtherOutput/Figures/D2_Truncated_LC_3C_NoMXL_*
+OtherOutput/Figures/Biowell_PlotData.rds
+OtherOutput/Figures/BiowellHistintervals_*
+OtherOutput/Figures/SimulatedMNLWTP_*
+OtherOutput/Figures/SurvivalCurves_*
+OtherOutput/Figures/WTPHistintervals_*
+OtherOutput/Figures/FactsheetPlot*
+OtherOutput/Figures/D2_SpatialMapOfRespondents_V0.png
+OtherOutput/Figures/D2_Responses_2024_10_29.jpeg
+OtherOutput/Figures/D2_V0_StructuralFigure.png
+OtherOutput/Figures/D2_V1_StructuralFigure.png
+OtherOutput/ClaudeSuggestions.txt
+
 # Stray files
 %
