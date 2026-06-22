@@ -2,7 +2,7 @@
 # Function: Generate Excel codebook for Data_Covariates_Step6.csv
 # Author: Dr Peter King (p.king1@leeds.ac.uk)
 # Last Edited: 20/06/2026
-# Output: OtherOutput/Tables/D2_Codebook.xlsx
+# Output: Survey/D2_Codebook.xlsx
 # Columns: variable_name | group | definition | coding | source | pii | needs_review
 
 library(data.table)
@@ -2177,7 +2177,7 @@ write_xlsx(
     Codebook       = as.data.frame(out),
     Study_Metadata = study_meta
   ),
-  here("OtherOutput/Tables", "D2_Codebook.xlsx")
+  here("Survey", "D2_Codebook.xlsx")
 )
 
 cat("Saved: OtherOutput/Tables/D2_Codebook.xlsx\n")

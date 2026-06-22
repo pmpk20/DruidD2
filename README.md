@@ -11,7 +11,7 @@ Last Change: 21/06/2026
 #### Description:
 
 -   `/Data/Main/` contains anonymised survey data for N = 1,684 online UK respondents from October 2024. Raw SurveyEngine export files (covariates xlsx, timestamps xlsx) are withheld; the anonymised input to the pipeline is `Data_Covariates_Step0.csv`. See the commented block at the top of `01_Druid_Setup_CleaningMain.R` for details of what was withheld and why.
--   `/Survey/` has the full survey reproduced and explained alongside pictures used therein.
+-   `/Survey/` has the full survey reproduced and explained alongside pictures used therein, and the codebook explaining each variable and coding.
 -   `/Biowell4/` is a backup for the Shiny app [here](https://pmpk20.shinyapps.io/biowell4/) demonstrating wellbeing scores from insects.
 -   Run `00_D2_Replicator.R` to execute all replication scripts in order. Scripts are numbered 01--19 by execution sequence.
 -   Data are publicly available in this repository. A Zenodo DOI will be linked here upon deposit.
@@ -57,7 +57,9 @@ D2Backup/
 │       └── 15_Druid_FigureC1_WTPClassesDistribution.R            # Figure C1
 ├── Survey/
 │   ├── Figure1_ChoiceCard.png                                         # Figure 1 (static image, not script-generated)
-│   └── D2_V2.codeplan.xlsx                                            # SurveyEngine codeplan (question text source for script 19)
+│   ├── CE_Explainer_A1.jpg ... CE_Explainer_Plan.jpg                  # choice experiment explainer slides (7 images)
+│   ├── D2_V2.codeplan.xlsx                                            # SurveyEngine codeplan (question text source for script 19)
+│   └── D2_Codebook.xlsx                                               # [output of 19] data codebook (380 variables)
 ├── CEOutput/
 │   └── Main/
 │       └── LCM/
@@ -65,6 +67,7 @@ D2Backup/
 │           ├── D2_Truncated_LC_3C_MXL_NoDR_V3_model_PiValues.rds # [output of 07] posterior class probabilities
 │           ├── D2_Truncated_LC_3C_MXL_NoDR_V3_estimates.csv       # [output of 07] parameter estimates
 │           ├── D2_Truncated_LC_3C_MXL_NoDR_V3_output.txt          # [output of 07] full model output
+│           ├── D2_Truncated_LC_3C_MXL_NoDR_V3_additional_output.txt  # [output of 07] Apollo session report
 │           └── D2_Truncated_LC_3C_MXL_NoDR_V3_SimulatedMeans_Wide.csv  # [output of 08] simulated WTP
 └── OtherOutput/
     ├── Figures/
@@ -77,8 +80,7 @@ D2Backup/
         ├── TableB2_SampleVsQuota.txt                              # [output of 14] Table B2
         ├── TableC1_SimulatedMeanWTP.csv                           # [output of 17] Table C1
         ├── TableC2_ModelEstimates.csv                             # [output of 18] Table C2
-        ├── TableC3_WellbeingLVs.csv                               # [output of 16] Table C3
-        └── D2_Codebook.xlsx                                       # [output of 19] data codebook (380 variables)
+        └── TableC3_WellbeingLVs.csv                               # [output of 16] Table C3
 ```
 
 #### Acknowledgements:

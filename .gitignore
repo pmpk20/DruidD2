@@ -55,5 +55,13 @@ Scripts/D2_HPCWorker.R
 Testing_Ngene_V1_iterations.csv
 job_submit.sh
 
+# Copyrighted insect illustrations and survey source files — kept locally only
+Survey/Figure1_ExampleCE.png
+Survey/D2_InsectSurvey_Final_ScreenshotsExplained.docx
+Survey/CE_Explainer_V4.pptx
+Survey/thebees_3_small.png
+Survey/thebeetles_3_small.png
+Survey/thewasps_3_small.png
+
 # Stray files
 %
