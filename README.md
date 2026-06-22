@@ -77,6 +77,8 @@ D2Backup/
     │   ├── D2_FigureB1_CEDebrief.jpg                              # [output of 13] Figure B1
     │   └── D2_FigureC1_WTPClassesDistribution.jpg                 # [output of 15] Figure C1
     └── Tables/
+        ├── Table1.txt                                             # [output of 09] Table 1 (WTP estimates)
+        ├── Table1_ClassAllocation.txt                             # [output of 09] class allocation counts
         ├── TableB2_SampleVsQuota.txt                              # [output of 14] Table B2
         ├── TableC1_SimulatedMeanWTP.csv                           # [output of 17] Table C1
         ├── TableC2_ModelEstimates.csv                             # [output of 18] Table C2

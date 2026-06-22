@@ -124,6 +124,7 @@ library(janitor)
 library(tidyverse)
 library(future)
 library(future.apply)
+library(parallel)
 
 
 # ****************************
