@@ -179,12 +179,13 @@ FigureB1 <-
 ## Save output in highest DPI
 ggsave(
   FigureB1,
-  device = "jpeg",
-  filename = here("OtherOutput/Figures", "D2_FigureB1_CEDebrief.jpg"),
+  device = "tiff",
+  filename = here("OtherOutput/Figures", "D2_FigureB1_CEDebrief.tiff"),
   width = 20,
   height = 25,
   units = "cm",
-  dpi = 500
+  dpi = 600,
+  compression = "lzw"
 )
 
 

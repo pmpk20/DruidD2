@@ -292,13 +292,14 @@ Figure4 <-
 
 ggsave(
   Figure4,
-  device = "jpeg",
+  device = "tiff",
   filename = here("OtherOutput/Figures",
-                  "D2_Figure4_WellbeingWTP.jpg"),
+                  "D2_Figure4_WellbeingWTP.tiff"),
   width = 30,
   height = 25,
   units = "cm",
-  dpi = 500
+  dpi = 600,
+  compression = "lzw"
 )
 
 

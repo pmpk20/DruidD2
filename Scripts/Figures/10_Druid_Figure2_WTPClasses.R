@@ -242,11 +242,12 @@ D2_Figure2_WTPClasses <-
 ## Save Figure 2
 ggsave(
   D2_Figure2_WTPClasses,
-  device = "jpeg",
-  filename = here("OtherOutput/Figures", "D2_Figure2_WTPClasses.jpg"),
+  device = "tiff",
+  filename = here("OtherOutput/Figures", "D2_Figure2_WTPClasses.tiff"),
   width = 30,
   height = 25,
   units = "cm",
-  dpi = 500
+  dpi = 600,
+  compression = "lzw"
 )
 

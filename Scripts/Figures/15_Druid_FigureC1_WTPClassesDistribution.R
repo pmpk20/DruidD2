@@ -296,11 +296,12 @@ D2_FigureX_WTPClasses_Distribution <-
 ## Find Figure 2 here
 ggsave(
   D2_FigureX_WTPClasses_Distribution,
-  device = "jpeg",
-  filename = here("OtherOutput/Figures", "D2_FigureC1_WTPClassesDistribution.jpg"),
+  device = "tiff",
+  filename = here("OtherOutput/Figures", "D2_FigureC1_WTPClassesDistribution.tiff"),
   width = 30,
   height = 25,
   units = "cm",
-  dpi = 500
+  dpi = 600,
+  compression = "lzw"
 )
 

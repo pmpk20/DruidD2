@@ -195,13 +195,14 @@ BioPlot <- BioWell_long %>%
 ## Save output in highest DPI
 ggsave(
   BioPlot,
-  device = "jpeg",
+  device = "tiff",
   filename = here("OtherOutput/Figures",
-                  "D2_Figure3_WellbeingDistributions.jpg"),
+                  "D2_Figure3_WellbeingDistributions.tiff"),
   width = 20,
   height = 25,
   units = "cm",
-  dpi = 500
+  dpi = 600,
+  compression = "lzw"
 )
 
 
