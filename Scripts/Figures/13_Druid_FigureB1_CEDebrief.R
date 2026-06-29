@@ -106,11 +106,12 @@ TextSetup <- element_text(size = TextSize,
 
 # **********************************************************************************
 #### Section 3: Plot ####
+# Landscape layout (35x20 cm, no legend) — replaces original portrait version.
+# Portrait original archived in Section Y below.
 # **********************************************************************************
 
 
-# Plotting
-FigureB1 <- 
+FigureB1 <-
   PlotData %>%
   ggplot(aes(
     x = value %>% as.factor(),
@@ -122,67 +123,53 @@ FigureB1 <-
                             point_interval = "mean_qi",
                             position = "dodge",
                             slab_colour = "black",
-                            aes(
-                              point_size = 1.5
-                            )) +
-  
-  facet_grid( ~ Class,
+                            aes(point_size = 1.5)) +
+
+  facet_grid(~ Class,
              labeller = labeller(Class = label_wrap_gen(width = 15))) +
-  
-  # Custom x-axis labels
+
   scale_x_discrete(
     name = "I understand the information presented here\n1/5 (Strongly disagree) - 5/5 (strongly agree)"
   ) +
-  
-  # Custom y-axis labels
-  scale_y_discrete(name = "Part of the CE", 
+
+  scale_y_discrete(name = "Part of the CE",
                    labels = prefix_labels) +
-  
-  # Adding vertical line at 50
-  geom_vline(xintercept = 3, 
-             alpha = 0.5) +
-  
-  theme_bw() + 
-  
-  # Custom fill colors
-  scale_fill_manual(
-    name = "Response", 
-    values = custom_colors,
-    labels = prefix_labels
-  ) +
-  
+
+  geom_vline(xintercept = 3, alpha = 0.5) +
+
+  theme_bw() +
+
+  scale_fill_manual(values = custom_colors, labels = prefix_labels) +
+
   scale_point_size_continuous(guide = NULL) +
   scale_slab_colour_discrete(guide = NULL) +
-  # Remove black rectangle around legend and adjust layout
-  theme(
-    legend.position = "bottom",
-    legend.text = TextSetup,
-    legend.title = TextSetup,
-    axis.text.x = TextSetup,
-    axis.text.y = TextSetup,
-    axis.title.y = TextSetup,
-    strip.background = element_rect(fill = "white"),
-    strip.text = TextSetup,
-    legend.background = element_blank(),
-    panel.grid.major.x = element_blank(),
-    panel.grid.minor.x = element_blank(),
-    panel.grid.major.y = element_blank()
-  )
+
+theme(
+  legend.position = "none",
+  legend.text = TextSetup,
+  legend.title = TextSetup,
+  axis.text.x = TextSetup,
+  axis.text.y = TextSetup,
+  axis.title.y = TextSetup,
+  strip.background = element_rect(fill = "white"),
+  strip.text = TextSetup,
+  legend.background = element_blank(),
+  panel.grid.major.x = element_blank(),
+  panel.grid.minor.x = element_blank(),
+  panel.grid.major.y = element_blank()
+)
 
 # **********************************************************************************
-#### Section 3: Plot ####
+#### Section 4: Export ####
 # **********************************************************************************
 
 
-
-# Date <- gsub(pattern = "-",replacement = "_",Sys.Date())
-## Save output in highest DPI
 ggsave(
   FigureB1,
   device = "tiff",
   filename = here("OtherOutput/Figures", "D2_FigureB1_CEDebrief.tiff"),
-  width = 20,
-  height = 25,
+  width = 35,
+  height = 20,
   units = "cm",
   dpi = 600,
   compression = "lzw"
@@ -190,70 +177,70 @@ ggsave(
 
 
 # **********************************************************************************
-#### Section Y: Sliders but facet and Y axis swapped ####
+#### Section Y: Original portrait layout (archived) ####
+# Portrait (20x25 cm) with legend. Replaced above by landscape version which
+# avoids the three facet columns being squashed when inserted into Word.
 # **********************************************************************************
 
-# PlotData %>%
+# FigureB1_portrait <-
+#   PlotData %>%
 #   ggplot(aes(
-#     x = value,
-#     y = Insect,
+#     x = value %>% as.factor(),
+#     y = name,
 #     group = name,
 #     fill = name
 #   )) +
 #   ggdist::stat_histinterval(outline_bars = TRUE,
+#                             point_interval = "mean_qi",
 #                             position = "dodge",
 #                             slab_colour = "black",
-#                             aes(
-#                               point_size = 1.5
-#                             )) +
-#   
-#   # Custom x-axis labels
-#   scale_x_continuous(
-#     name = "Response\n(Strongly disagree - strongly agree)",
-#     limits = c(0, 100),
-#     breaks = seq(0, 100, 10),
-#     labels = seq(0, 100, 10)
+#                             aes(point_size = 1.5)) +
+#
+#   facet_grid(~ Class,
+#              labeller = labeller(Class = label_wrap_gen(width = 15))) +
+#
+#   scale_x_discrete(
+#     name = "I understand the information presented here\n1/5 (Strongly disagree) - 5/5 (strongly agree)"
 #   ) +
-#   
-#   # Custom y-axis labels
-#   scale_y_discrete(name = "Variable", 
-#                    labels = PlotData$Insect %>% unique()) +
-#   
-#   # Adding vertical line at 50
-#   geom_vline(xintercept = 50, 
-#              alpha = 0.5) +
-#   
-#   theme_bw() + 
-#   
-#   facet_grid( ~ Statement) +
-#   
-#   # Custom fill colors
+#
+#   scale_y_discrete(name = "Part of the CE",
+#                    labels = prefix_labels) +
+#
+#   geom_vline(xintercept = 3, alpha = 0.5) +
+#
+#   theme_bw() +
+#
 #   scale_fill_manual(
-#     name = "Response", 
-#     values = c(
-#       RColorBrewer::brewer.pal(n = 4, name = "Purples"),
-#       RColorBrewer::brewer.pal(n = 4, name = "Greys"),
-#       RColorBrewer::brewer.pal(n = 4, name = "Reds")),
-#     labels = prefix_labels,
-#     guide = guide_legend(nrow = 4, 
-#                          ncol = 3, 
-#                          reverse = TRUE)
+#     name = "Response",
+#     values = custom_colors,
+#     labels = prefix_labels
 #   ) +
-#   
+#
 #   scale_point_size_continuous(guide = NULL) +
 #   scale_slab_colour_discrete(guide = NULL) +
-#   # Remove black rectangle around legend and adjust layout
+#
 #   theme(
 #     legend.position = "bottom",
 #     legend.text = TextSetup,
 #     legend.title = TextSetup,
+#     legend.background = element_blank(),
 #     axis.text.x = TextSetup,
 #     axis.text.y = TextSetup,
 #     axis.title.y = TextSetup,
 #     strip.background = element_rect(fill = "white"),
 #     strip.text = TextSetup,
-#     legend.background = element_blank(),
 #     panel.grid.major.x = element_blank(),
 #     panel.grid.minor.x = element_blank(),
 #     panel.grid.major.y = element_blank()
 #   )
+#
+# ggsave(
+#   FigureB1_portrait,
+#   device = "tiff",
+#   filename = here("OtherOutput/Figures", "D2_FigureB1_CEDebrief_portrait.tiff"),
+#   width = 20,
+#   height = 25,
+#   units = "cm",
+#   dpi = 600,
+#   compression = "lzw"
+# )
