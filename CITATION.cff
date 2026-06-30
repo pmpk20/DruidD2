@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite the associated paper."
+title: "Replication materials: Heterogeneous Preferences for Use and Non-use Values Provided by Insects"
+authors:
+  - family-names: King
+    given-names: Peter
+    affiliation: University of Leeds
+  - family-names: Breeze
+    given-names: Tom
+    affiliation: University of Reading
+  - family-names: Robinson
+    given-names: Theresa
+    affiliation: University of Reading / JNCC
+  - family-names: Dallimer
+    given-names: Martin
+    affiliation: Imperial College London
+repository-code: "https://github.com/pmpk20/DruidD2"
+doi: "10.5281/zenodo.20799845"
+date-released: "2026"
+preferred-citation:
+  type: article
+  title: "Heterogeneous Preferences for Use and Non-use Values Provided by Insects"
+  authors:
+    - family-names: King
+      given-names: Peter
+      affiliation: University of Leeds
+    - family-names: Breeze
+      given-names: Tom
+      affiliation: University of Reading
+    - family-names: Robinson
+      given-names: Theresa
+      affiliation: University of Reading / JNCC
+    - family-names: Dallimer
+      given-names: Martin
+      affiliation: Imperial College London
+  journal: "People and Nature"
+  year: 2026
+  doi: "10.5281/zenodo.20799845"
