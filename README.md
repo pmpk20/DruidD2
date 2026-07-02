@@ -1,15 +1,15 @@
+# Heterogeneous Preferences for Use and Non-use Values Provided by Insects: supporting dataset
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20799844.svg)](https://doi.org/10.5281/zenodo.20799844)
 ------------------------------------------------------------------------
 
-#### Title: *Heterogeneous Preferences for Use and Non-use Values Provided by Insects: supporting dataset*
 
-#### Keywords: Bequest, Choice Modelling, Cultural Ecosystem Services, Encountering, Existence, Insects, Non-use Values.
-
-#### Paper authors: Peter King (Leeds), Tom Breeze (Reading), Theresa Robinson (JNCC), Martin Dallimer (Imperial). Correspondence: p.king1\@leeds.ac.uk
-
-#### Status: Published in ***People and Nature*** --- doi: [forthcoming](forthcoming)
-
-#### Last change: 02/07/2026
+#### About:
+- Repo Author: Dr Peter King (University of Leeds). Correspondence: p.king1\@leeds.ac.uk
+- Co-authors: Dr Tom Breeze (University of Reading), Dr Theresa Robinson (JNCC), Prof. Martin Dallimer (Imperial College London)
+- Status: Published in ***People and Nature*** --- doi: [forthcoming](forthcoming)
+- Keywords: Bequest, Choice Modelling, Cultural Ecosystem Services, Encountering, Existence, Insects, Non-use Values.
+- Last Change: 02/07/2026
 
 #### Acknowledgements:  
 -   This work was supported by the Natural Environment Research Council Grant/Award Number: NE/V006916/1 This work is part of task D2 of work package D for the DRUID project: <https://environment.leeds.ac.uk/geography-research-river-basin-processes-management/dir-record/research-projects/1656/drivers-and-repercussions-of-uk-insect-declines-druid>
