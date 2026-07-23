@@ -8,9 +8,9 @@
 #### About:
 - Repo Author: Dr Peter King (University of Leeds). Correspondence: p.king1\@leeds.ac.uk
 - Co-authors: Dr Tom Breeze (University of Reading), Dr Theresa Robinson (JNCC), Prof. Martin Dallimer (Imperial College London)
-- Status: Published in ***People and Nature*** --- doi: [[forthcoming](https://doi.org/10.1002/pan3.70385)](https://doi.org/10.1002/pan3.70385)
+- Status: Published in ***People and Nature*** --- [https://doi.org/10.1002/pan3.70385](https://doi.org/10.1002/pan3.70385)
 - Keywords: Bequest, Choice Modelling, Cultural Ecosystem Services, Encountering, Existence, Insects, Non-use Values.
-- Last Change: 02/07/2026
+- Last Change: 23/07/2026
 
 #### Acknowledgements:  
 -   This work was supported by the Natural Environment Research Council Grant/Award Number: NE/V006916/1 This work is part of task D2 of work package D for the DRUID project: <https://environment.leeds.ac.uk/geography-research-river-basin-processes-management/dir-record/research-projects/1656/drivers-and-repercussions-of-uk-insect-declines-druid>
