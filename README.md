@@ -1,7 +1,9 @@
 # Heterogeneous Preferences for Use and Non-use Values Provided by Insects: supporting dataset
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21075898.svg)](https://doi.org/10.5281/zenodo.21075898)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![ORCID](https://img.shields.io/badge/ORCID-0000--0001--8550--466X-A6CE39?logo=orcid)](https://orcid.org/0000-0001-8550-466X)
+[![GitHub release](https://img.shields.io/github/v/release/pmpk20/DruidD2)](https://github.com/pmpk20/DruidD2/releases)
 ------------------------------------------------------------------------
 
 
