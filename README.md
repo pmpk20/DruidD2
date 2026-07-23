@@ -1,13 +1,14 @@
 # Heterogeneous Preferences for Use and Non-use Values Provided by Insects: supporting dataset
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20799844.svg)](https://doi.org/10.5281/zenodo.20799844)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21075898.svg)](https://doi.org/10.5281/zenodo.21075898)
+
 ------------------------------------------------------------------------
 
 
 #### About:
 - Repo Author: Dr Peter King (University of Leeds). Correspondence: p.king1\@leeds.ac.uk
 - Co-authors: Dr Tom Breeze (University of Reading), Dr Theresa Robinson (JNCC), Prof. Martin Dallimer (Imperial College London)
-- Status: Published in ***People and Nature*** --- doi: [forthcoming](forthcoming)
+- Status: Published in ***People and Nature*** --- doi: [[forthcoming](https://doi.org/10.1002/pan3.70385)](https://doi.org/10.1002/pan3.70385)
 - Keywords: Bequest, Choice Modelling, Cultural Ecosystem Services, Encountering, Existence, Insects, Non-use Values.
 - Last Change: 02/07/2026
 
@@ -22,10 +23,10 @@
 -   `/CEOutput/Main/LCM/`: Outputs of just the modelling used in-text. If you want to know about specification search just ask!
 -   `/OtherOutput/`: All tables + figures in the manuscript.
 -   `/Scripts/`: All cleaning, modelling, and reporting R scripts.
--   `/Data/Main/` contains anonymised survey data for N = 1,684 online UK respondents from October 2024. The anonymised input to the pipeline is `Data_Covariates_Step0.csv`. See the commented block at the top of `01_Druid_Setup_CleaningMain.R` for details of what was withheld and why.
+-   `/Data/Main/` contains anonymised survey data for N = 1,684 online UK respondents from 7th - 23rd October 2024. The anonymised input to the pipeline is `Data_Covariates_Step0.csv`. See the commented block at the top of `01_Druid_Setup_CleaningMain.R` for details of what was withheld and why.
 -   `/Survey/` has the full survey reproduced and explained alongside pictures used therein, and the codebook explaining each variable and coding.
 -   Run `00_D2_Replicator.R` to execute all replication scripts in order. Scripts are numbered 01--19 by execution sequence.
--   Data are publicly available in this repository. Zenodo DOI: [https://doi.org/10.5281/zenodo.20799845](https://doi.org/10.5281/zenodo.20799844)
+-   Data are publicly available in this repository. Zenodo DOI: [https://doi.org/10.5281/zenodo.21075898](https://doi.org/10.5281/zenodo.21075898)
 
   #### Requirements:
   - R version 4.5.0 or later
